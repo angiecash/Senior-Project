@@ -1,0 +1,87 @@
+
+/*
+ids:
+#skip (for skipping to main content)
+logIn
+signUp
+
+classes:
+.hide (Hiding headers)
+.sr-only
+
+menu
+list-menu
+*/
+
+/* #region || CSS RESET */
+/* #endregion || CSS RESET */
+
+/* #region || Variables */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+}
+/* #endregion || Variables */
+
+/* #region || General Styles & Typogrpahy */
+/*
+.hide {
+    display: none;
+}
+    */
+/* Skip Link Styles */
+#skip {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+#skip:focus {
+		position: static;
+		width: auto;			
+		height: auto;
+}
+
+/* Hidden Content Styles */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* #endregion || General Styles & Typogrpahy */
+
+/* #region || Mobile First 600px */
+@media screen and (max-width: 600px) {
+
+}
+/* #endregion || Mobile First 600px */
+
+/* #region ||  Small 600px */
+@media screen and (min-width: 600px) {
+
+}
+/* #endregion || Small 600px */
+
+/* #region || Medium 768px */
+@media screen and (min-width: 768px) {
+
+}
+/* #endregion || Medium 768px */
+
+/* #region || Large 992px */
+@media screen and (min-width: 992px) {
+
+}
+/* #endregion || Larege 992px */
+
+/* #region || Extra Large 1200px */
+@media screen and (min-width: 1200px) {
+
+}
+/* #endregion || Extra Large 1200px */
