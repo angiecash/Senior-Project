@@ -79,7 +79,7 @@ table {
 }
 /* #endregion || Variables */
 
-/* #region || General Styles & Typogrpahy */
+/* #region || General Styles & Typography */
 /*
 .hide {
     display: none;
@@ -111,7 +111,7 @@ table {
 	overflow: hidden;
 }
 
-/* #endregion || General Styles & Typogrpahy */
+/* #endregion || General Styles & Typography */
 
 /* #region || Mobile First 600px */
 @media screen and (max-width: 600px) {
@@ -135,7 +135,7 @@ table {
 @media screen and (min-width: 992px) {
 
 }
-/* #endregion || Larege 992px */
+/* #endregion || Large 992px */
 
 /* #region || Extra Large 1200px */
 @media screen and (min-width: 1200px) {
