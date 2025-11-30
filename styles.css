@@ -49,6 +49,7 @@ header {
 	height: 60px;
 	justify-items: center;
 	align-content: space-between;
+	
 }
 body {
 	max-width: 1200px;
@@ -56,6 +57,8 @@ body {
 	margin: 0 auto;
 	line-height: normal;
 	background-color: white;
+	border-radius: 25px;
+	padding: 20px;
 }
 a {
 	text-decoration: none;
@@ -74,6 +77,7 @@ h2 {
 }
 main {
 	margin: 50px auto;
+	padding: 20px;
 }
 /* ------- NAVIGATION ------- */
 nav {
@@ -91,6 +95,33 @@ nav {
 	left: -9999px;
 	top: -9999px;
 }
+/* ------- NAVIGATION END------- */
+
+/* ------- FOOTER ------- */
+footer {
+	margin: 0 auto;
+	padding: 20px;
+	line-height: 1.5em;
+}
+footer #flex-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#flex-footer section {
+	flex-direction: column;
+}
+footer a:hover {
+	color: var(--mdpurple);
+}
+#copyright {
+	font-size: 12px;
+	color: red;
+	line-height: 1.2;
+	text-align: center;
+	margin-top: 50px;
+}
+/* ------- FOOTER END ------- */
 /* #endregion || General Styles */
 
 /* #region || Mobile First */
@@ -140,10 +171,12 @@ nav {
 #mainnav ul li a:hover {
 	color: var(--mdpurple);
 }
+/* THIS IS NEEDED FOR THE SUBMENUS
 #mainnav ul li:hover > ul.submenu li {
 	visibility: visible;
 	background-color: var(--ltpurple);
 }
+	*/
 /* #region || Hamburger Menu & Animation from Mikael Ainalme ( https://codepen.io/ainalem/pen/LJYRxz?editors=1100 ) */
 nav label {
 	width: 115px;
@@ -202,11 +235,16 @@ main img {
 .intro {
 	margin: 0 auto;
 }
+footer {
+	flex-wrap: wrap;
+}
 /* #endregion || Mobile First */
 
-/* #region || Medium 768px 
+/* #region || Medium 768px */
 @media screen and (min-width: 768px) {
-
+footer {
+	flex-wrap: nowrap;
+}
 }
 /* #endregion || Medium 768px */
 
