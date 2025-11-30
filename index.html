@@ -39,7 +39,7 @@
         <!-- hamburger menu -->
         <input name="dropdown" id="dropdown" type="checkbox">
         <label for="dropdown">
-          <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+          <svg class="ham hamRotate" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
             <path
                   class="line top"
                   d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
@@ -55,7 +55,7 @@
         <!-- Collapsible Menu -->
         <div id="dropmenu">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">Home</a></li>
 
             <li><a href="studio.html">Studio</a>
               <ul class="submenu">
@@ -109,7 +109,7 @@
    </header>
 
     <main id="#main-content">
-      <section id="about">
+      <section id="primary">
         <h2 class="sr-only">About</h2>
 
         <div class="intro">
@@ -118,6 +118,7 @@
           <p>Discover the joy of movement at Dancing for Joy, a welcoming studio where dancers of every level may explore their passion and flourish within a vibrant, supportive community.</p>
         </div>
 
+        <div class="pri-content">
         <h3>Mission Statement</h3>
         At Dancing for Joy, every dancer is empowered to ignite their light through dance. In harmony with this vision, we offer performance-level and competition-level classes led by experienced instructors who cultivate a nurturing environment. Through this guidance, dancers develop strong techniques and expressive artistry, allowing their inner light to grow brighter with every step.
 
@@ -125,19 +126,18 @@
         <a href="https://www.biblegateway.com/passage/?search=matthew%205:14&version=NIV">Matthew 5:14</a>
         
         <a href="studio.html">Learn More</a>
+        </div>
       </section>
-    </main>
 
-    <aside>
-
+      <section id="secondary">
         <h2>Classes</h2>
         <a href="#">Youth Classes</a>
-        <a href="#">Adult classes</a>
-
+        <a href="#">Adult Classes</a>
         <a href="#">Free Trial</a>
         <a href="#">Sign Up</a>
+      </section>
 
-    </aside>
+    </main>
 
     <footer>
       <section id="connect">
