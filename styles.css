@@ -86,14 +86,15 @@ main {
 .dfj-button {
 	border: 0;
 	line-height: 2;
-	padding: 0 20px;
+	padding: 10px;
 	font-size: 1em;
 	text-align: center;
 	color: white;
-	border-radius: 10px;
+	border-radius: 15px;
 	background-color: var(--dkpurple);
 	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
 	transition: all .3s ease-in-out;
+	width: fit-content;
 }
 .dfj-button:hover {
 	background-color: var(--white);
@@ -130,11 +131,7 @@ footer {
 	line-height: 1.5em;
 }
 #flex-footer {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-#flex-footer section {
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 }
@@ -275,28 +272,32 @@ main img {
 footer {
 	font-size: 24px;
 }
-#flex-footer {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-/*
-footer {
-	flex-wrap: wrap;
-}
-	*/
 /* #endregion || Mobile First */
 
 /* #region || Medium 768px */
 @media screen and (min-width: 768px) {
-a {
+nav a {
 	font-size: 18px;
 }
 #dropmenu ul li {
 	padding: 5px;
 }
-footer {
-	flex-wrap: nowrap;
+#flex-footer {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+#flex-footer section {
+	margin: 0 auto;
+	display: flex;
+}
+#connect {
+	flex-direction: column;
+	align-items: center;
+}
+#contact {
+	flex-direction: column;
+	align-items: end;
 }
 main img { 
 	max-width: 75vw;
