@@ -81,6 +81,30 @@ main {
 	margin: 50px auto;
 	padding: 20px;
 }
+/* ------- Buttons ------- */
+.dfj-button {
+	border: 0;
+	line-height: 2;
+	padding: 0 20px;
+	font-size: 1em;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+	background-color: var(--dkpurple);
+	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
+	transition: all .3s ease-in-out;
+}
+.dfj-button:hover {
+	background-color: var(--white);
+	color: var(--dkpurple);
+	outline: 2px solid var(--dkpurple);
+}
+.dfj-button:active {
+	box-shadow:
+	inset -2px -2px 3px rgb(255 255 255 / 0.6),
+	inset 2px 2px 3px rgb(0 0 0 /0.6);
+}
+/* ------- Buttons End ------- */
 /* ------- NAVIGATION ------- */
 nav {
 	display: block;
@@ -115,6 +139,13 @@ footer {
 }
 footer a:hover {
 	color: var(--mdpurple);
+}
+#social-media {
+	margin: 0 auto;
+	padding-top: 15px;
+}
+#social-media a {
+	padding: 5px;
 }
 #copyright {
 	font-size: 14px;
