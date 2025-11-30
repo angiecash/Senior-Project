@@ -57,8 +57,10 @@ body {
 	margin: 0 auto;
 	line-height: normal;
 	background-color: white;
+	/*
 	border-radius: 25px;
 	padding: 20px;
+	*/
 }
 a {
 	text-decoration: none;
@@ -100,26 +102,29 @@ nav {
 /* ------- FOOTER ------- */
 footer {
 	margin: 0 auto;
-	padding: 20px;
 	line-height: 1.5em;
 }
-footer #flex-footer {
+#flex-footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 #flex-footer section {
+	display: flex;
 	flex-direction: column;
 }
 footer a:hover {
 	color: var(--mdpurple);
 }
 #copyright {
-	font-size: 12px;
-	color: red;
+	font-size: 14px;
 	line-height: 1.2;
 	text-align: center;
 	margin-top: 50px;
+	color: var(--white);
+	background-color: var(--mdpurple);
+	padding: 10px 0;
+	text-transform: uppercase;
 }
 /* ------- FOOTER END ------- */
 /* #endregion || General Styles */
@@ -236,8 +241,18 @@ main img {
 	margin: 0 auto;
 }
 footer {
+	font-size: 24px;
+}
+#flex-footer {
+	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 }
+/*
+footer {
+	flex-wrap: wrap;
+}
+	*/
 /* #endregion || Mobile First */
 
 /* #region || Medium 768px */
