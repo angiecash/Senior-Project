@@ -63,6 +63,7 @@ body {
 	*/
 }
 a {
+	font-size: 24px;
 	text-decoration: none;
 	color: var(--dkpurple);
 	font-weight: 700;
@@ -176,14 +177,14 @@ footer a:hover {
 	width: 100%;
 	text-align: center;
 	left: 0;
+	height: 90%;
 }
 #dropmenu ul li {
-	padding: 15px;
-	font-size: 20px;
+	padding: 30px;
 }
 #dropdown:checked ~ #dropmenu, 
 #dropdown:checked ~ #portal {
-	display:contents;
+	display:block;
 }
 #dropdown:checked ~ #dropmenu ul, 
 #dropdown:checked ~ #portal ul {
@@ -212,7 +213,7 @@ footer a:hover {
 	visibility: visible;
 	background-color: var(--ltpurple);
 }
-	*/
+*/
 /* #region || Hamburger Menu & Animation from Mikael Ainalme ( https://codepen.io/ainalem/pen/LJYRxz?editors=1100 ) */
 nav label {
 	width: 115px;
@@ -288,8 +289,18 @@ footer {
 
 /* #region || Medium 768px */
 @media screen and (min-width: 768px) {
+a {
+	font-size: 18px;
+}
+#dropmenu ul li {
+	padding: 5px;
+}
 footer {
 	flex-wrap: nowrap;
+}
+main img { 
+	max-width: 75vw;
+	height: auto;
 }
 }
 /* #endregion || Medium 768px */
