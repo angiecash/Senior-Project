@@ -30,14 +30,14 @@
     <a id="skip" href="#main-content">Skip to Main Content</a>
     
     <header>
-      <h1 class="hide">Dancing For Joy</h1>  
+      <h1 class="sr-only">Dancing For Joy</h1>  
       <img id="logo" src="images/logo.png" alt="Dancing for Joy Logo" height="80">
      
       <nav id="mainnav">
-        <h2 class="hide">Navigation</h2>
+        <h2 class="sr-only">Navigation</h2>
 
         <!-- hamburger menu -->
-        <input id="dropdown" type="checkbox">
+        <input name="dropdown" id="dropdown" type="checkbox">
         <label for="dropdown">
           <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
             <path
@@ -108,11 +108,15 @@
       </nav>
    </header>
 
-    <main>
+    <main id="#main-content">
       <section id="about">
-        <h2 class="hide">About</h2>
-        Ignite Your Light Through Dance
-        Discover the joy of movement at Dancing for Joy, a welcoming studio where dancers of every level may explore their passion and flourish within a vibrant, supportive community.
+        <h2 class="sr-only">About</h2>
+
+        <div class="intro">
+          <img src="images/joyImage.avif" alt="Six young dancers dressed in sparkly ballet outsides, the middle two are holding a glowing sign that says JOY">
+          <h3>Ignite Your Light Through Dance</h3>
+          <p>Discover the joy of movement at Dancing for Joy, a welcoming studio where dancers of every level may explore their passion and flourish within a vibrant, supportive community.</p>
+        </div>
 
         <h3>Mission Statement</h3>
         At Dancing for Joy, every dancer is empowered to ignite their light through dance. In harmony with this vision, we offer performance-level and competition-level classes led by experienced instructors who cultivate a nurturing environment. Through this guidance, dancers develop strong techniques and expressive artistry, allowing their inner light to grow brighter with every step.
@@ -122,22 +126,24 @@
         
         <a href="studio.html">Learn More</a>
       </section>
+    </main>
 
-      <section id="classes">
+    <aside>
+
         <h2>Classes</h2>
         <a href="#">Youth Classes</a>
         <a href="#">Adult classes</a>
 
         <a href="#">Free Trial</a>
         <a href="#">Sign Up</a>
-      </section>
-    </main>
+
+    </aside>
 
     <footer>
       <section id="connect">
-        <h2 class="hide">Connect</h2>
+        <h2 class="sr-only">Connect</h2>
 
-        <h3 class="hide">Social Media Links</h3>
+        <h3 class="sr-only">Social Media Links</h3>
         <a href="https://www.facebook.com/dancing4joyy">Facebook</a>
         
         <a href="https://www.instagram.com/dancing4joyy/">Instagram</a>
@@ -146,7 +152,7 @@
       </section>
 
       <section id="contact">
-        <h3 class="hide">Contact</h3>
+        <h3 class="sr-only">Contact</h3>
         <a href="tel:+8136100801">813-610-0801</a><br>
         <a href="mailto:dancingforjoy777@gmail.com">dancingforjoy777@gmail.com</a><br>
         <br>
@@ -157,14 +163,14 @@
       </section>
 
       <section id="links">
-        <h3 class="hide">Links</h3>
+        <h3 class="sr-only">Links</h3>
         <a href="https://www.google.com/maps/place/Dancing+for+Joy/@27.8523027,-82.303417,17z/data=!3m1!4b1!4m6!3m5!1s0x88c2d1c4ecf7f70b:0xc5ed4a41ec2ca639!8m2!3d27.8523027!4d-82.303417!16s%2Fg%2F11h4knhcp9?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D">Google Reviews</a>
 
         <a href="https://app.gostudiopro.com/online/dancingforjoy4">Parent Portal</a>
       </section>
 
 
-      <h2 class="hide">Copyright</h2>
+      <h2 class="sr-only">Copyright</h2>
       <p>Copyright &copy; 2025. All Rights Reserved.
       <i>This site is for educational purposes only.</i></p>
     </footer>

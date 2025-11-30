@@ -5,7 +5,35 @@
 }
 /* #endregion || Variables */
 
-/* #region || General Styles & Typography */
+/* #region || Skip Link Styles */
+#skip {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+#skip:focus {
+		position: static;
+		width: auto;			
+		height: auto;
+}
+/* #endregion || Skip Link Styles */
+
+/* #region || Hidden Content Styles */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+/* #endregion || Hidden Content Styles */
+
+/* #region || General Styles (Mobile First) */
+/* ------- GENERAL STYLES -------*/
 html {
 	box-sizing: border-box;
 }
@@ -14,10 +42,9 @@ header {
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	align-items: center;
-	height: 50px;
+	height: 60px;
 	justify-items: center;
 	align-content: space-between;
-
 }
 body {
 	max-width: 1200px;
@@ -30,25 +57,19 @@ a {
 	text-decoration: none;
 	color: purple;
 }
-.hide {
-    visibility: hidden;
-	height: 0px;
-	margin: 0px;
-}
 h2 {
 	font-family: sans-serif;
 	font-weight: 700;
 	font-size: 32px;
 	color: var(--black);
 }
-#logo {
-	grid-column: 1 / span 1;
-	position: relative;
-	top: -30%;
+main {
+	margin: 50px auto;
 }
+/* ------- NAVIGATION ------- */
 nav {
 	display: block;
-	margin-left: 25px;
+	width: 100%;
 }
 #mainnav ul {
 	list-style: none;
@@ -61,13 +82,21 @@ nav {
 	left: -9999px;
 	top: -9999px;
 }
+/* ------- GENERAL STYLES END -------*/
+
+/* ------- MOBILE FIRST ------- */
+#logo {
+	grid-column: 1 / span 1;
+	position: relative;
+	top: 0;
+}
 /* For nav dropdown menu */
 #dropmenu, #portal {
 	display: none;
 }
 #dropmenu ul {
 	background-color: white;
-	top: 65px;
+	top: 85px;
 	width: 100%;
 	text-align: center;
 	left: 0;
@@ -86,10 +115,6 @@ nav {
 	flex-direction: column;
 	position: absolute;
 }
-#mainnav > ul > li {
-	display: inline-block;
-	padding: 0 6px;
-}
 #mainnav ul li {
 	position: relative;
 }
@@ -103,13 +128,10 @@ nav {
 	text-align: end;
 	visibility:  hidden;
 }
-#mainnav ul li ul li {
-	margin-left: 0;
-}
 #mainnav ul li:hover {
 	background-color: lightpink;
 }
-#mainnav ul li:hover > ul.submenu {
+#mainnav ul li:hover > ul.submenu li {
 	top: 100%;
 	visibility: visible;
 	background-color: lightpink;
@@ -159,17 +181,20 @@ nav label {
   stroke-dashoffset: -64px;
 }
 /* END OF HAMBURGER MENU */
-main {
-	background-color: lightgoldenrodyellow;
-	margin-top: 25px;
-}
-/* #endregion || General Styles & Typography */
 
-/* #region || Mobile First 600px */
-@media screen and (min-width: 600px) {
-
+main img { 
+	max-width: 85vw;
+	height: auto;
+	border-radius: 55px;
+	display: block;
+	margin: 0 auto;
 }
-/* #endregion || Mobile First 600px 
+.intro {
+	margin: 0 auto;
+}
+
+/* ------- MOBILE FIRST END ------- */
+/* #endregion || General Styles (Mobile First) */
 
 /* #region || Medium 768px 
 @media screen and (min-width: 768px) {
@@ -182,36 +207,24 @@ main {
 nav label {
 	display: none;
 }
-/*
-#dropdown:checked ~ #dropmenu ul, 
-#dropdown:checked ~ #portal ul {
-	position: static;
-}
-	*/
-
 #mainnav {
 	height: 50px;
 }
 #dropmenu {
 	display: block;
-	font-size: 20px;
 }
 #dropmenu ul {
 	display: flex;
 	justify-content: space-around;
 	height: 50px;
-	align-items: flex-start;
+	/*align-items: flex-start;*/
+	top: 0;
 }
-/*
-#dropdown:checked ~ #dropmenu ul, 
-#dropdown:checked ~ #portal ul {
-	display: none;
-}
-	*/
 #dropmenu ul li {
-	float: left;
 	position: relative;
 	padding: 10px;
+	font-size: 16px;
+	text-align: center;
 }
 #submenu {
 	background-color: white;
@@ -219,6 +232,10 @@ nav label {
 #dropmenu > ul > li > ul {
 	flex-direction: column;
 	height:max-content;
+}
+main img { 
+	max-width: 1000px;
+	height: auto;
 }
 }
 /* #endregion || Large 992px */
