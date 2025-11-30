@@ -1,0 +1,237 @@
+/* #region || Variables */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+}
+/* #endregion || Variables */
+
+/* #region || General Styles & Typography */
+html {
+	box-sizing: border-box;
+}
+body {
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	line-height: normal;
+}
+a {
+	text-decoration: none;
+	color: purple;
+	font-size: 32px;
+}
+.hide {
+    visibility: hidden;
+	height: 0px;
+	margin: 0px;
+}
+h2 {
+	font-family: sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: var(--black);
+}
+nav {
+	position: relative;
+	z-index: 1000;
+	font-size: 1.5em;
+	background-color: white;
+}
+nav ul {
+	background-color: white;
+	list-style-type: none;
+}
+/* For nav checkbox */
+#dropdown {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+/* For nav dropdown menu */
+#drop-menu, #portal {
+	display: none;
+}
+#dropdown:checked ~ #drop-menu, 
+#dropdown:checked ~ #portal {
+	display: block;
+}
+.sub-menu {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+/* Hamburger Menu & Animation from Mikael Ainalme
+https://codepen.io/ainalem/pen/LJYRxz?editors=1100 */
+nav label {
+	width: 115px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ham {
+	cursor: pointer;
+	/*	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;*/
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.ham8 .top {
+  stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+  /*stroke-dasharray: 40 142;*/
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+  stroke-dashoffset: -64px; 
+}
+.ham8.active .middle {
+  stroke-dashoffset: -20px;
+  transform: rotate(90deg);
+}
+.ham8.active .bottom {
+  stroke-dashoffset: -64px;
+}
+/* END OF HAMBURGER MENU */
+
+/* #endregion || General Styles & Typography */
+
+/* #region || Mobile First 600px */
+@media screen and (min-width: 600px) {
+	nav {
+		position: relative;
+	}
+	nav label {
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 1001;
+		cursor: pointer;
+	}
+	#drop-menu, #portal {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: white;
+		z-index: 999;
+	}
+	#drop-menu ul, #portal ul {
+		padding: 20px 0;
+	}
+	#drop-menu li,
+	#portal li {
+		width: 100%;
+		text-align: center;
+	}
+	#drop-menu a,
+	#portal a {
+		display: block;
+		padding: 15px;
+		font-size: 1.4rem;
+	}
+	.sub-cat:hover > .sub-menu,
+	.sub-cat:focus-within > .sub-menu {
+		display: block;
+	}
+	.sub-menu li {
+		text-align: center;
+	}
+	.sub-menu a:hover {
+		background: violet;
+	}
+}
+/* #endregion || Mobile First 600px */
+
+/* #region || Medium 768px */
+@media screen and (min-width: 768px) {
+
+}
+/* #endregion || Medium 768px */
+
+/* #region || Large 992px */
+@media screen and (min-width: 992px) {
+	nav label {
+		display: none;
+	}
+	#drop-menu {
+		display: flex;
+	}
+	#drop-menu ul {
+		display: flex;
+		flex-direction: row;
+	}
+	#portal {
+		display: block !important;
+	}
+	#drop-menu > ul > li {
+		position: relative;
+	}
+	#drop-menu > ul > li > a {
+		font-size: 1em;
+		padding: 10px 15px;
+		display: block;
+	}
+	#portal ul {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	#portal li {
+		margin: 0 10px;
+	}
+	#drop-menu > ul > li:hover > .sub-menu {
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		background: grey;
+		min-width: 200px;
+		box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+		border-radius: 8px;
+		overflow: hidden;
+		z-index: 1000;
+	}
+	.sub-menu li {
+		width: 100%;
+	}
+	.sub-menu a {
+		padding: 14px 20px;
+		white-space: nowrap;
+		color: blue;
+		transition: background 0.2s;
+	}
+	.sub-menu a:hover {
+		background: orange;
+	}
+}
+/* #endregion || Large 992px */
+
+/* #region || Extra Large 1200px 
+@media screen and (min-width: 1200px) {
+
+}
+/* #endregion || Extra Large 1200px */

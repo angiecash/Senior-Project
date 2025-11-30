@@ -1,0 +1,350 @@
+
+/*
+ids:
+#skip (for skipping to main content)
+logIn
+signUp
+
+classes:
+.hide (Hiding headers)
+.sr-only
+
+menu
+list-menu
+*/
+/* #region || CSS RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+} 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* #endregion || CSS RESET */
+
+/* #region || Variables */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+}
+/* #endregion || Variables */
+
+/* #region || General Styles & Typography */
+html {
+	box-sizing: border-box;
+}
+body {
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	line-height: normal;
+}
+a {
+	text-decoration: none;
+	color: purple;
+	font-size: 32px;
+}
+.hide {
+    visibility: hidden;
+	height: 0px;
+	margin: 0px;
+}
+h2 {
+	font-family: sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: var(--black);
+}
+nav {
+	position: relative;
+	z-index: 1000;
+	font-size: 1.5em;
+	background-color: white;
+}
+nav ul {
+	background-color: white;
+}
+/* For nav checkbox */
+nav #dropdown {
+	display: none;
+}
+/* For nav dropdown menu */
+#drop-menu {
+	display: none;
+}
+nav ul {
+	list-style-type: none;
+}
+/* Hamburger Menu & Animation from Mikael Ainalme
+https://codepen.io/ainalem/pen/LJYRxz?editors=1100 */
+nav label {
+	width: 115px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ham {
+	cursor: pointer;
+	/*	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;*/
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.ham8 .top {
+  stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+  /*stroke-dasharray: 40 142;*/
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+  stroke-dashoffset: -64px; 
+}
+.ham8.active .middle {
+  stroke-dashoffset: -20px;
+  transform: rotate(90deg);
+}
+.ham8.active .bottom {
+  stroke-dashoffset: -64px;
+}
+/* END OF HAMBURGER MENU */
+
+/* Skip Link Styles */
+#skip {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+#skip:focus {
+		position: static;
+		width: auto;			
+		height: auto;
+}
+
+/* Hidden Content Styles */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* #endregion || General Styles & Typography */
+
+/* #region || Mobile First 600px */
+@media screen and (min-width: 600px) {
+/*
+	#drop-menu {
+	align-items: flex-end;
+	background: lightblue;
+	width: 100%;
+	right: 0;
+	position: relative;
+	flex-direction: column;
+	right: 0;
+}
+#drop-menu ul {
+	/*display: flex;*/
+	padding: 0;
+	margin: 0;
+}
+#drop-menu li {
+	padding: 10px;
+	position: relative;
+}
+#drop-menu li:hover {
+	background: gray;
+}
+#drop-menu .sub-menu {
+	display: none;
+	position: absolute;
+	background: yellow;
+	width: 150px;
+	top: 50px;
+	right: 0;
+}
+#drop-menu .sub-cat:hover .sub-menu {
+	display: block;
+}
+#drop-menu .sub-menu {
+	top: 0;
+	right: 100%;
+}
+#drop-menu {
+	display: none;
+	background-color: #FFFFFF80;
+}
+#dropdown:checked ~ #drop-menu {
+	display: flex;
+	width: 100%;
+	position: absolute;
+	top: 65px;
+}
+/* I WANT THESE TO SHOW UP ON THE BOTTOM
+input#dropdown:checked ~ div#portal li#logIn {
+	position: absolute;
+	bottom: 25px;
+	right: 150px;
+	top: 0;
+}
+input#dropdown:checked ~ div#portal li#signUp {
+	position: absolute;
+	bottom: 25px;
+	right: 300px;
+	top: 0;
+	display: block;
+}
+*/
+div#drop-menu li {
+	width: 100%;  
+	text-align: center;
+	margin: 20px;
+}
+div#drop-menu li a:hover {
+	color: black;
+}
+
+div#drop-menu li:hover li ul {
+	background-color: #FFFFFFAF;
+	margin: 0px;
+}
+div#drop-menu li ul li {
+	background-color: #FFFFFFAF;
+	margin: 0px;
+}
+	
+div#drop-menu .sub-menu {
+	display: none;
+}
+nav div#drop-menu li:hover .sub-menu {
+	display: block;
+}
+#signUp {
+	display: none;
+}
+#logIn {
+	position: absolute;
+	top: 25px;
+	right: 150px;
+}*/
+}
+/* #endregion || Mobile First 600px */
+
+/* #region ||  Small 600px 
+@media screen and (min-width: 600px) {
+
+}
+/* #endregion || Small 600px */
+
+/* #region || Medium 768px 
+@media screen and (min-width: 768px) {
+
+}
+/* #endregion || Medium 768px */
+
+/* #region || Large 992px */
+@media screen and (min-width: 992px) {
+	
+nav label {
+	display: none;
+}
+.sub-menu {
+	display: none;
+}
+nav div#drop-menu {
+	position: absolute;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	gap: 20px;
+	height: 100%;
+	visibility: visible;
+}
+nav div#drop-menu li:hover .sub-menu {
+	display: block;
+}
+#signUp {
+	display:inline-block;
+	position: absolute;
+	top: 25px;
+	right: 300px;
+}
+}
+/* #endregion || Large 992px */
+
+/* #region || Extra Large 1200px 
+@media screen and (min-width: 1200px) {
+
+}
+/* #endregion || Extra Large 1200px */

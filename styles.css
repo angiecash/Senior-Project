@@ -1,77 +1,3 @@
-
-/*
-ids:
-#skip (for skipping to main content)
-logIn
-signUp
-
-classes:
-.hide (Hiding headers)
-.sr-only
-
-menu
-list-menu
-*/
-/*
-/* #region || CSS RESET 
-*, *::before, *::after {
-    box-sizing: border-box;
-} 
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-/* #endregion || CSS RESET 
-*/
-
 /* #region || Variables */
 :root {
     --black: #000000;
@@ -80,52 +6,172 @@ table {
 /* #endregion || Variables */
 
 /* #region || General Styles & Typography */
-/*
+html {
+	box-sizing: border-box;
+}
+header {
+	background-color: white;
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	align-items: center;
+	height: 50px;
+	justify-items: center;
+	align-content: space-between;
+
+}
+body {
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	line-height: normal;
+	background-color: white;
+}
+a {
+	text-decoration: none;
+	color: purple;
+}
 .hide {
-    display: none;
+    visibility: hidden;
+	height: 0px;
+	margin: 0px;
 }
-*/
-
-/* Skip Link Styles */
-#skip {
+h2 {
+	font-family: sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: var(--black);
+}
+#logo {
+	grid-column: 1 / span 1;
+	position: relative;
+	top: -30%;
+}
+nav {
+	display: block;
+	margin-left: 25px;
+}
+#mainnav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/* For nav checkbox */
+#dropdown {
 	position: absolute;
-	left: -10000px;
-	top: auto;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+	left: -9999px;
+	top: -9999px;
 }
-#skip:focus {
-		position: static;
-		width: auto;			
-		height: auto;
+/* For nav dropdown menu */
+#dropmenu, #portal {
+	display: none;
 }
-
-/* Hidden Content Styles */
-.sr-only {
+#dropmenu ul {
+	background-color: white;
+	top: 65px;
+	width: 100%;
+	text-align: center;
+	left: 0;
+}
+#dropmenu ul li {
+	padding: 15px;
+	font-size: 20px;
+}
+#dropdown:checked ~ #dropmenu, 
+#dropdown:checked ~ #portal {
+	display:contents;
+}
+#dropdown:checked ~ #dropmenu ul, 
+#dropdown:checked ~ #portal ul {
+	display: flex;
+	flex-direction: column;
 	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
 }
-
+#mainnav > ul > li {
+	display: inline-block;
+	padding: 0 6px;
+}
+#mainnav ul li {
+	position: relative;
+}
+#mainnav > ul > li > a {
+	position: relative;
+	display: block;
+	margin: 0 15px;
+}
+#mainnav ul.submenu {
+	position: relative;
+	text-align: end;
+	visibility:  hidden;
+}
+#mainnav ul li ul li {
+	margin-left: 0;
+}
+#mainnav ul li:hover {
+	background-color: lightpink;
+}
+#mainnav ul li:hover > ul.submenu {
+	top: 100%;
+	visibility: visible;
+	background-color: lightpink;
+}
+/* Hamburger Menu & Animation from Mikael Ainalme
+https://codepen.io/ainalem/pen/LJYRxz?editors=1100 */
+nav label {
+	width: 115px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ham {
+	cursor: pointer;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.ham8 .top {
+  stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+  /*stroke-dasharray: 40 142;*/
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+  stroke-dashoffset: -64px; 
+}
+.ham8.active .middle {
+  stroke-dashoffset: -20px;
+  transform: rotate(90deg);
+}
+.ham8.active .bottom {
+  stroke-dashoffset: -64px;
+}
+/* END OF HAMBURGER MENU */
+main {
+	background-color: lightgoldenrodyellow;
+	margin-top: 25px;
+}
 /* #endregion || General Styles & Typography */
 
 /* #region || Mobile First 600px */
-@media screen and (max-width: 600px) {
-
-}
-/* #endregion || Mobile First 600px */
-
-/* #region ||  Small 600px */
 @media screen and (min-width: 600px) {
 
 }
-/* #endregion || Small 600px */
+/* #endregion || Mobile First 600px 
 
-/* #region || Medium 768px */
+/* #region || Medium 768px 
 @media screen and (min-width: 768px) {
 
 }
@@ -133,11 +179,51 @@ table {
 
 /* #region || Large 992px */
 @media screen and (min-width: 992px) {
+nav label {
+	display: none;
+}
+/*
+#dropdown:checked ~ #dropmenu ul, 
+#dropdown:checked ~ #portal ul {
+	position: static;
+}
+	*/
 
+#mainnav {
+	height: 50px;
+}
+#dropmenu {
+	display: block;
+	font-size: 20px;
+}
+#dropmenu ul {
+	display: flex;
+	justify-content: space-around;
+	height: 50px;
+	align-items: flex-start;
+}
+/*
+#dropdown:checked ~ #dropmenu ul, 
+#dropdown:checked ~ #portal ul {
+	display: none;
+}
+	*/
+#dropmenu ul li {
+	float: left;
+	position: relative;
+	padding: 10px;
+}
+#submenu {
+	background-color: white;
+}
+#dropmenu > ul > li > ul {
+	flex-direction: column;
+	height:max-content;
+}
 }
 /* #endregion || Large 992px */
 
-/* #region || Extra Large 1200px */
+/* #region || Extra Large 1200px 
 @media screen and (min-width: 1200px) {
 
 }

@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Dancing For Joy">
 
     <link rel="icon" type="image/png" href="images/dfj_shortcuticon.png">
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet">
     
   </head>
@@ -30,62 +30,83 @@
     <a id="skip" href="#main-content">Skip to Main Content</a>
     
     <header>
-    <h1 class="hide">Dancing For Joy</h1>  
-    </header>
+      <h1 class="hide">Dancing For Joy</h1>  
+      <img id="logo" src="images/logo.png" alt="Dancing for Joy Logo" height="80">
+     
+      <nav id="mainnav">
+        <h2 class="hide">Navigation</h2>
 
-    <nav>
-      <h2 class="hide">Navigation</h2>
-      <ul>
-        <li id="logo">
-          <img src="images/logo.png" alt="Dancing for Joy Logo">
-        </li>
+        <!-- hamburger menu -->
+        <input id="dropdown" type="checkbox">
+        <label for="dropdown">
+          <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path
+                  class="line top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path
+                  class="line middle"
+                  d="m 30,50 h 40" />
+            <path
+                  class="line bottom"
+                  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+          </svg>
+        </label>
 
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Studio</a>
+        <!-- Collapsible Menu -->
+        <div id="dropmenu">
           <ul>
-            <li>About Us</li>
-            <li>Instructors</li>
-            <li>Season</li>
-            <li>Recital</li>
-            <li>Events</li>
+            <li><a href="#">Home</a></li>
+
+            <li><a href="studio.html">Studio</a>
+              <ul class="submenu">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Instructors</a></li>
+                <li><a href="#">Season</a></li>
+                <li><a href="#">Recital</a></li>
+                <li><a href="#">Events</a></li>
+              </ul>
+            </li>
+
+            <li><a href="classes.html">Classes</a>
+              <ul class="submenu">
+                <li><a href="#">Genres</a></li>
+                <li><a href="#">Youth Classes</a></li>
+                <li><a href="#">Adult Classes</a></li>
+                <li><a href="#">Tuition</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Dress Code</a></li>
+              </ul>
+            </li>
+
+            <li><a href="programs.html">Programs</a>
+              <ul class="submenu">
+                <li><a href="#">Aftercare</a></li>
+                <li><a href="#">Summer</a></li>
+              </ul>
+            </li>
+
+            <li><a href="joycompany.html">Joy Company</a>
+              <ul class="submenu">
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Private Lessons</a></li>
+              </ul>
+            </li>
+
+            <li><a href="parties.html">Events and Parties</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Trial Class</a></li>
           </ul>
-        </li>
-
-        <li><a href="#">Classes</a>
-          <ul class="menu list-menu">
-            <li>Genres</li>
-            <li>Youth Classes</li>
-            <li>Adult Classes</li>
-            <li>Tuition</li>
-            <li>Register</li>
-            <li>Dress Code</li>
+        </div>
+        <div id="portal">
+          <ul>
+            <li id="signUp"><a href="#">Sign Up</a></li>
+            <li id="logIn"><a href="#">Log In</a></li>
           </ul>
-        </li>
-
-        <li><a href="#">Programs</a>
-          <ul class="menu list-menu">
-            <li>Aftercare</li>
-            <li>Summer</li>
-          </ul>
-        </li>
-
-        <li><a href="#">Joy Company</a>
-          <ul class="menu list-menu">
-            <li>Teams</li>
-            <li>Calendar</li>
-            <li>Private Lessons</li>
-          </ul>
-        </li>
-
-        <li><a href="#">Events and Parties</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Trial Class</a></li>
-
-        <li id="signUp"><a href="#">Sign Up</a></li>
-        <li id="logIn"><a href="#">Log In</a></li>
-      </ul>
-    </nav>
+        </div>
+      </nav>
+   </header>
 
     <main>
       <section id="about">
