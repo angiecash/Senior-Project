@@ -373,6 +373,17 @@ main img {
 	width: auto;
 	max-height: 300px;
 }
+.summer-images {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	flex-grow: 1 1 0;
+	max-width: 900px;
+}
+.summer-images img {
+	height: 100%;
+	width: 100%;
+}
 /* ------- FOOTER 768 ------- */
 #flex-footer {
 	margin: 0 auto;
