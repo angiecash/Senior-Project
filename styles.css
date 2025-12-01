@@ -265,6 +265,9 @@ nav label {
 }
 /* #endregion || END OF HAMBURGER MENU */
 /* ------- NAVIGATION (Mobile) (Cont.) ------- */
+main {
+	font-size: 24px;
+}
 main img { 
 	max-width: 85vw;
 	height: auto;
@@ -344,8 +347,11 @@ nav label {
 	width: 100%;
 	padding-top: 10px;
 }
+main {
+	font-size: 18px;
+}
 main img { 
-	max-width: 1000px;
+	max-width: 900px;
 	height: auto;
 }
 }
