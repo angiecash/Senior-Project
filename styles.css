@@ -373,6 +373,7 @@ main img {
 	width: auto;
 	max-height: 300px;
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! I need to make the images fit across in a row*/
 .summer-images {
 	display: flex;
 	flex-direction: row;
