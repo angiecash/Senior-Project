@@ -158,6 +158,12 @@ nav {
 	align-items: center;
 	justify-content: center;
 }
+.summer-images {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 20px;
+}
 /* ------- FOOTER ------- */
 footer {
 	line-height: 1.5em;
