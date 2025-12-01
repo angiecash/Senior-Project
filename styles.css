@@ -128,7 +128,7 @@ nav {
 	border-radius: 15px;
 	margin: 10px auto;
 	height: fit-content;
-	line-height: .5;
+	line-height: 1;
 }
 .person p:nth-child(2) {
 	font-size: 1.2em;
