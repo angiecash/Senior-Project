@@ -364,9 +364,6 @@ main img {
 	justify-content: center;
 	margin: 0 auto;
 }
-.person {
-	height: 395px;
-}
 #int-gallery .person img {
 	width: auto;
 	max-height: 300px;
@@ -426,6 +423,9 @@ main {
 main img { 
 	max-width: 900px;
 	height: auto;
+}
+.person {
+	height: 395px;
 }
 }
 /* #endregion || Large 992px */
