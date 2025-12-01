@@ -1,6 +1,7 @@
 /* #region || Variables */
 :root {
 	--dkpurple: #561b75;
+	--transparent-purple: #561b7580;
 	--mdpurple: #ca95e7;
 	--ltpurple: #ead5f5;
     --black: #000000;
@@ -120,6 +121,31 @@ nav {
 	top: -9999px;
 }
 /* ------- NAVIGATION END------- */
+.person {
+	padding: 10px 10px 0 10px;
+	text-align: center;
+	box-shadow: var(--transparent-purple) 2px 2px 8px 2px;
+	border-radius: 15px;
+	margin: 10px auto;
+	height: fit-content;
+	line-height: .5;
+}
+.person p:nth-child(2) {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.person p:nth-child(3) {
+	font-size: 1em;
+	font-weight: 400;
+}
+#career {
+	text-align: center;
+	height: 150px;
+	width: 400px;
+	margin: 0 auto;
+	line-height: 1;
+	padding-top: 10px;
+}
 /* ------- FOOTER ------- */
 footer {
 	line-height: 1.5em;
@@ -278,6 +304,21 @@ main img {
 .intro {
 	margin: 0 auto;
 }
+/* ------- INSTRUCTOR GALLERY (Mobile) ------- */
+#int-gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#int-gallery .person img {
+	max-width: 65vw;
+}
+#int-gallery .person img:hover {
+	/*scale: 115%;*/
+	transition: scale .3s ease-in-out;
+}
+/* ------- INSTRUCTOR GALLERY END (Mobile) ------- */
+/* ------- FOOTER (Mobile) ------- */
 footer {
 	font-size: 24px;
 }
@@ -289,12 +330,35 @@ footer {
 
 /* #region || Medium 768px */
 @media screen and (min-width: 768px) {
+/* ------- NAVIGATION ------- */
 nav a {
 	font-size: 18px;
 }
 #dropmenu ul li {
 	padding: 5px;
 }
+/* ------- ------- */
+main img { 
+	max-width: 75vw;
+	height: auto;
+}
+#int-gallery {
+	display: flex;
+	flex-direction: row;
+	max-width: 900px;
+	flex-wrap: wrap;
+	gap: 50px;
+	justify-content: center;
+	margin: 0 auto;
+}
+.person {
+	height: 395px;
+}
+#int-gallery .person img {
+	width: auto;
+	max-height: 300px;
+}
+/* ------- FOOTER 768 ------- */
 #flex-footer {
 	margin: 0 auto;
 	display: flex;
@@ -311,10 +375,6 @@ nav a {
 #contact {
 	flex-direction: column;
 	align-items: end;
-}
-main img { 
-	max-width: 75vw;
-	height: auto;
 }
 }
 /* #endregion || Medium 768px */
