@@ -40,6 +40,7 @@
 html {
 	box-sizing: border-box;
 	background-color: var(--dkpurple);
+	height: 100%;
 }
 header {
 	background-color: white;
@@ -49,18 +50,12 @@ header {
 	height: 60px;
 	justify-items: center;
 	align-content: space-between;
-	
 }
 body {
 	max-width: 1200px;
-	height: 100%;
 	margin: 0 auto;
 	line-height: normal;
 	background-color: white;
-	/*
-	border-radius: 25px;
-	padding: 20px;
-	*/
 }
 a {
 	font-size: 24px;
@@ -82,7 +77,7 @@ main {
 	margin: 50px auto;
 	padding: 20px;
 }
-/* ------- Buttons ------- */
+/* ------- BUTTONS ------- */
 .dfj-button {
 	border: 0;
 	line-height: 2;
@@ -106,7 +101,7 @@ main {
 	inset -2px -2px 3px rgb(255 255 255 / 0.6),
 	inset 2px 2px 3px rgb(0 0 0 /0.6);
 }
-/* ------- Buttons End ------- */
+/* ------- BUTTONS END ------- */
 /* ------- NAVIGATION ------- */
 nav {
 	display: block;
@@ -127,11 +122,9 @@ nav {
 /* ------- FOOTER ------- */
 footer {
 	line-height: 1.5em;
-	/*margin: 0 auto;*/
 	text-align: center;
 }
 #flex-footer {
-	/*margin: 0 auto;*/
 	display: flex;
 	flex-direction: column;
 }
@@ -164,7 +157,8 @@ footer a:hover {
 	position: relative;
 	top: 0;
 }
-/* For nav dropdown menu */
+/* ------- NAVIGATION (Mobile) ------- */
+/* #portal is for Sign Up and Login links, to be placed in the dropdown menu */
 #dropmenu, #portal {
 	display: none;
 }
@@ -174,12 +168,12 @@ footer a:hover {
 	width: 100%;
 	text-align: center;
 	left: 0;
-	height: 90%;
+	height: 100dvh;
 }
 #dropmenu ul li {
 	padding: 30px;
 }
-/*
+/* Needed for #portal links whenever they are added *
 #dropdown:checked ~ #dropmenu, 
 #dropdown:checked ~ #portal {
 	display:block;
@@ -188,7 +182,7 @@ footer a:hover {
 #dropdown:checked ~ #dropmenu {
 	display:block;
 }
-/*
+/* /* Needed for #portal links whenever they are added *
 #dropdown:checked ~ #dropmenu ul, 
 #dropdown:checked ~ #portal ul {
 	display: flex;
@@ -210,7 +204,6 @@ footer a:hover {
 	margin: 0 15px;
 }
 #mainnav ul.submenu {
-	/*position: relative;*/
 	text-align: end;
 	visibility:  hidden;
 }
@@ -270,6 +263,7 @@ nav label {
   stroke: var(--mdpurple);
 }
 /* #endregion || END OF HAMBURGER MENU */
+/* ------- NAVIGATION (Mobile) (Cont.) ------- */
 main img { 
 	max-width: 85vw;
 	height: auto;
