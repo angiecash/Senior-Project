@@ -1,0 +1,146 @@
+/* #region || Mobile First */
+#logo {
+	grid-column: 1 / span 1;
+	position: relative;
+	top: 0;
+}
+
+main {
+	font-size: 24px;
+}
+main img { 
+	max-width: 85vw;
+	height: auto;
+	border-radius: 55px;
+	display: block;
+	margin: 0 auto;
+}
+.intro {
+	margin: 0 auto;
+}
+/* ------- INSTRUCTOR GALLERY (Mobile) ------- */
+#int-gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#int-gallery .person img {
+	max-width: 65vw;
+}
+#int-gallery .person img:hover {
+	/*scale: 115%;*/
+	transition: scale .3s ease-in-out;
+}
+/* ------- INSTRUCTOR GALLERY END (Mobile) ------- */
+/* ------- FOOTER (Mobile) ------- */
+footer {
+	font-size: 24px;
+}
+#contact {
+	display: flex;
+	flex-direction: column;
+}
+/* #endregion || Mobile First */
+
+/* #region || Medium 768px */
+@media screen and (min-width: 768px) {
+/* ------- ------- */
+main img { 
+	max-width: 75vw;
+	height: auto;
+}
+#int-gallery {
+	display: flex;
+	flex-direction: row;
+	max-width: 900px;
+	flex-wrap: wrap;
+	gap: 50px;
+	justify-content: center;
+	margin: 0 auto;
+}
+#int-gallery .person img {
+	width: auto;
+	max-height: 300px;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! I need to make the images fit across in a row*/
+.summer-images {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	flex-grow: 1 1 0;
+	max-width: 900px;
+}
+.summer-images img {
+	height: 100%;
+	width: 100%;
+}
+/* ------- FOOTER 768 ------- */
+#flex-footer {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+#flex-footer section {
+	margin: 0 auto;
+	display: flex;
+}
+#connect {
+	flex-direction: column;
+	align-items: center;
+}
+#contact {
+	flex-direction: column;
+	align-items: end;
+}
+}
+/* #endregion || Medium 768px */
+
+/* #region || Large 992px */
+@media screen and (min-width: 992px) {
+.center {
+	gap: 100px;
+}
+nav label {
+	display: none;
+}
+#mainnav {
+	height: 50px;
+}
+#dropmenu {
+	display: block;
+}
+#dropmenu ul {
+	display: flex;
+	justify-content: space-around;
+	height: 50px;
+	top: 0;
+}
+#dropmenu ul li {
+	position: relative;
+	font-size: 16px;
+	text-align: center;
+}
+#dropmenu > ul > li > ul {
+	flex-direction: column;
+	height:max-content;
+	width: 100%;
+	padding-top: 10px;
+}
+main {
+	font-size: 18px;
+}
+main img { 
+	max-width: 900px;
+	height: auto;
+}
+.person {
+	height: 395px;
+}
+}
+/* #endregion || Large 992px */
+
+/* #region || Extra Large 1200px 
+@media screen and (min-width: 1200px) {
+
+}
+/* #endregion || Extra Large 1200px */

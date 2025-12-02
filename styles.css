@@ -43,13 +43,14 @@ html {
 	background: linear-gradient(var(--dkpurple),var(--mdpurple),var(--dkpurple));
 	height: 100dvh;
 	background-repeat:repeat-y;
+	color: var(--dkpurple);
 }
 header {
 	background-color: white;
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	align-items: center;
-	height: 60px;
+	/*height: 60px;*/
 	justify-items: center;
 	align-content: space-between;
 }
@@ -67,7 +68,6 @@ a {
 }
 .active {
 	color: var(--mdpurple);
-	text-transform: uppercase;
 }
 h2 {
 	font-family: sans-serif;
@@ -127,6 +127,7 @@ nav {
 	top: -9999px;
 }
 /* ------- NAVIGATION END------- */
+/* ------- STUDIO ------- */
 .person {
 	padding: 10px 10px 0 10px;
 	text-align: center;
@@ -152,6 +153,7 @@ nav {
 	line-height: 1;
 	padding-top: 10px;
 }
+/* ------- STUDIO END ------- */
 #secondary {
 	display: flex;
 	flex-direction: column;
@@ -164,6 +166,23 @@ nav {
 	width: 100%;
 	gap: 20px;
 }
+/* ------- PARTIES ------- */
+#parties {
+	background-image: url("images/events.avif");
+	
+}
+.party {
+	padding: 15px;
+	box-shadow: var(--transparent-purple) 2px 2px 8px 2px;
+	background-color: #FFFFFF80;
+	color: var(--dkpurple);
+	border-radius: 15px;
+	margin: 10px auto;
+	height: fit-content;
+	line-height: 1;
+	display: flex;
+	flex-direction: column;
+}
 /* ------- FOOTER ------- */
 footer {
 	line-height: 1.5em;
@@ -172,6 +191,11 @@ footer {
 #flex-footer {
 	display: flex;
 	flex-direction: column;
+}
+footer a, footer address {
+	color: var(--dkpurple);
+	font-weight: 400;
+	font-size: 16px;
 }
 footer a:hover {
 	color: var(--mdpurple);
@@ -385,6 +409,12 @@ main img {
 	height: 100%;
 	width: 100%;
 }
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
 /* ------- FOOTER 768 ------- */
 #flex-footer {
 	margin: 0 auto;
@@ -402,6 +432,9 @@ main img {
 #contact {
 	flex-direction: column;
 	align-items: end;
+}
+footer {
+	font-size: 18px;
 }
 }
 /* #endregion || Medium 768px */
