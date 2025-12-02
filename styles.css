@@ -113,7 +113,7 @@ main {
 	background-color: var(--dkpurple);
 	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
 	transition: all .3s ease-in-out;
-	width: fit-content;
+	/*width: fit-content;*/
 }
 .dfj-button:hover {
 	background-color: var(--white);
@@ -383,7 +383,7 @@ main img {
 	height: auto;
 	border-radius: 55px;
 	display: block;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 .intro {
 	margin: 0 auto;
