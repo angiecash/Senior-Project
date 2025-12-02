@@ -471,14 +471,14 @@ nav a {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	height: fit-content;
-	/*top: 0;*/
-	/*gap: 20px;*/
+}
+#dropmenu ul li {
+	padding: 0;
 }
 #dropmenu ul li:not(:last-child) {
 	position: relative;
 	font-size: 16px;
 	text-align: center;
-	padding: 0;
 }
 #dropmenu > ul > li > ul {
 	flex-direction: column;
@@ -488,12 +488,10 @@ nav a {
 }
 #signupnav {
 	position: absolute;
-	top: 50px;
-	right: 20px;
-	transform: none;
-	max-height: 100%;
+	top: 60px;
 	z-index: 9999;
 	background-color: transparent;
+	transform: translateX(170%);
 }
 /* ------- 992px Styles ------- */
 main {
