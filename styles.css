@@ -50,7 +50,6 @@ header {
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	align-items: center;
-	/*height: 60px;*/
 	justify-items: center;
 	align-content: space-between;
 }
@@ -66,12 +65,22 @@ a {
 	color: var(--dkpurple);
 	font-weight: 700;
 }
-
-h2 {
+h1, h2, h3, h4, h5 {
 	font-family: sans-serif;
 	font-weight: 700;
-	font-size: 32px;
-	color: var(--black);
+	color: var(--dkpurple);
+}
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.17em;
+}
+h4 {
+	font-size: 1em;
+}
+h5 {
+	font-size: .83em;
 }
 main {
 	margin: 50px auto;
@@ -196,6 +205,34 @@ nav {
 	display: flex;
 	flex-direction: column;
 }
+/* ------- JOY COMPANY (General Styles) ------- */
+.company {
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+	box-shadow: var(--transparent-purple) 4px 4px 12px 4px;
+	background-color: var(--dkpurple);
+	color: var(--white);
+	border-radius: 15px;
+	margin: 10px 50px;
+	height: fit-content;
+	line-height: 1;
+}
+.company p:nth-child(2) {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.copmpany p:nth-child(3) {
+	font-size: 1em;
+	font-weight: 400;
+}
+/*
+.even {
+
+}
+.odd {
+
+}
+*/
 /* ------- FOOTER (General Styles)------- */
 footer {
 	line-height: 1.5em;
@@ -365,6 +402,20 @@ main img {
 	transition: scale .3s ease-in-out;
 }
 /* ------- INSTRUCTOR GALLERY END (Mobile) ------- */
+/* ------- JOY COMPANY GALLERY (Mobile) ------- */
+#company-gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#company-gallery .company img {
+	max-width: 75vw;
+	box-shadow: 0px 10px 8px -8px rgb(255 255 255 / 0.6);
+}
+#company-gallery .company img:hover {
+	/*scale: 115%;*/
+	transition: scale .3s ease-in-out;
+}
 /* ------- FOOTER (Mobile) ------- */
 footer {
 	font-size: 24px;
@@ -379,13 +430,16 @@ footer {
 @media screen and (min-width: 768px) {
 /* ------- NAVIGATION 768px ------- */
 #signupnav {
-	position: fixed;
+	position: absolute;
 	top: -6px;
 	left: 50%;
 	transform: translateX(-50%);
 	max-height: 100%;
 	z-index: 9999;
 	background-color: var(--white);
+}
+#dropdown:checked ~ #dropmenu #signupnav {
+	transform: translateX(-50%) translateY(-93%);
 }
 /* ------- PAGES 768px ------- */
 main img { 
@@ -405,6 +459,20 @@ main img {
 #int-gallery .person img {
 	width: auto;
 	max-height: 300px;
+}
+/* ------- JOY COMPANY 768px ------- */
+#company-gallery {
+	display: flex;
+	flex-direction: row;
+	max-width: 1100px;
+	flex-wrap: wrap;
+	gap: 50px;
+	justify-content: center;
+	margin: 0 auto;
+}
+#company-gallery .company img {
+	width: auto;
+	max-height: 250px;
 }
 /* ------- PROGRAMS 768px ------- */
 .summer-images {
