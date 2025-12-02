@@ -103,6 +103,8 @@ main {
 }
 /* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
+	display: block;
+	margin: 0 auto;
 	border: 0;
 	line-height: 2;
 	padding: 10px;
@@ -113,7 +115,7 @@ main {
 	background-color: var(--dkpurple);
 	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
 	transition: all .3s ease-in-out;
-	/*width: fit-content;*/
+	width: fit-content;
 }
 .dfj-button:hover {
 	background-color: var(--white);
@@ -225,14 +227,6 @@ nav {
 	font-size: 1em;
 	font-weight: 400;
 }
-/*
-.even {
-
-}
-.odd {
-
-}
-*/
 /* ------- FOOTER (General Styles)------- */
 footer {
 	line-height: 1.5em;
@@ -416,6 +410,15 @@ main img {
 	/*scale: 115%;*/
 	transition: scale .3s ease-in-out;
 }
+/* ------- CLASSES 768px ------- */
+#genre-gallery {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+#genre-gallery .genre {
+	max-width: 75vw;
+}
 /* ------- FOOTER (Mobile) ------- */
 footer {
 	font-size: 24px;
@@ -459,6 +462,23 @@ main img {
 #int-gallery .person img {
 	width: auto;
 	max-height: 300px;
+}
+/* ------- CLASSES 768px ------- */
+#genre-gallery {
+	display: flex;
+	flex-direction: row;
+	max-width: 1100px;
+	flex-wrap: wrap;
+	gap: 50px;
+	justify-content: space-around;
+	margin: 0 auto;
+	align-items: flex-start;
+}
+#genre-gallery .genre {
+	width: 400px;
+}
+#genre-gallery .genre img {
+	max-width: 350px;
 }
 /* ------- JOY COMPANY 768px ------- */
 #company-gallery {
