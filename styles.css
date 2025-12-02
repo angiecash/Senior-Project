@@ -66,9 +66,7 @@ a {
 	color: var(--dkpurple);
 	font-weight: 700;
 }
-.active {
-	color: var(--mdpurple);
-}
+
 h2 {
 	font-family: sans-serif;
 	font-weight: 700;
@@ -79,13 +77,22 @@ main {
 	margin: 50px auto;
 	padding: 20px;
 }
+/* ------- GENERAL CLASSES ------- */
 .center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
 }
-/* ------- BUTTONS ------- */
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.active {
+	color: var(--mdpurple);
+}
+/* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
 	border: 0;
 	line-height: 2;
@@ -109,8 +116,8 @@ main {
 	inset -2px -2px 3px rgb(255 255 255 / 0.6),
 	inset 2px 2px 3px rgb(0 0 0 /0.6);
 }
-/* ------- BUTTONS END ------- */
-/* ------- NAVIGATION ------- */
+/* ------- BUTTON STYLES END ------- */
+/* ------- NAVIGATION (General Styles) ------- */
 nav {
 	display: block;
 	width: 100%;
@@ -120,14 +127,22 @@ nav {
 	margin: 0;
 	padding: 0;
 }
-/* For nav checkbox */
+/* For nav input checkbox */
 #dropdown {
 	position: absolute;
 	left: -9999px;
 	top: -9999px;
 }
 /* ------- NAVIGATION END------- */
-/* ------- STUDIO ------- */
+/* ------- HOMEPAGE (General Styles) ------- */
+#secondary {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+/* ------- HOMEPAGE END ------- */
+/* ------- STUDIO (General Styles) ------- */
 .person {
 	padding: 10px 10px 0 10px;
 	text-align: center;
@@ -154,27 +169,25 @@ nav {
 	padding-top: 10px;
 }
 /* ------- STUDIO END ------- */
-#secondary {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
+/* ------- PROGRAMS (General Styles)------- */
 .summer-images {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	gap: 20px;
 }
-/* ------- PARTIES ------- */
+/* ------- PARTIES (General Styles) ------- */
 #parties {
 	background-image: url("images/events.avif");
-	
+	background-size: contain;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 .party {
 	padding: 15px;
 	box-shadow: var(--transparent-purple) 2px 2px 8px 2px;
-	background-color: #FFFFFF80;
+	background-color: #FFFFFFC0;
 	color: var(--dkpurple);
 	border-radius: 15px;
 	margin: 10px auto;
@@ -183,10 +196,12 @@ nav {
 	display: flex;
 	flex-direction: column;
 }
-/* ------- FOOTER ------- */
+/* ------- FOOTER (General Styles)------- */
 footer {
 	line-height: 1.5em;
 	text-align: center;
+	background-color: var(--white);
+	margin-top: 20px;
 }
 #flex-footer {
 	display: flex;
@@ -227,9 +242,10 @@ footer a:hover {
 	top: 0;
 }
 /* ------- NAVIGATION (Mobile) ------- */
-/* #portal is for Sign Up and Login links, to be placed in the dropdown menu */
+/* #portal is for Sign Up and Login links, to be placed in the dropdown menu  or top of screen*/
 #dropmenu, #portal {
-	display: none;
+	overflow: hidden;
+	max-height: 0;
 }
 #dropmenu ul {
 	background-color: white;
@@ -242,36 +258,25 @@ footer a:hover {
 #dropmenu ul li {
 	padding: 30px;
 }
-/* Needed for #portal links whenever they are added *
-#dropdown:checked ~ #dropmenu, 
-#dropdown:checked ~ #portal {
-	display:block;
-}
-*/
 #dropdown:checked ~ #dropmenu {
 	display:block;
 }
-/* /* Needed for #portal links whenever they are added *
-#dropdown:checked ~ #dropmenu ul, 
-#dropdown:checked ~ #portal ul {
+#dropdown:checked ~ #dropmenu ul {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 }
-*/
-#dropdown:checked ~ #dropmenu ul{
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-}
+/*
 #mainnav ul li {
 	position: relative;
 }
+*/
 #mainnav > ul > li > a {
 	position: relative;
 	display: block;
 	margin: 0 15px;
 }
+/* THIS IS FOR SUBMENUS THAT ARE CURRENTLY HIDDEN */
 #mainnav ul.submenu {
 	text-align: end;
 	visibility:  hidden;
@@ -285,7 +290,7 @@ footer a:hover {
 	background-color: var(--ltpurple);
 }
 */
-/* #region || Hamburger Menu & Animation from Mikael Ainalme ( https://codepen.io/ainalem/pen/LJYRxz?editors=1100 ) */
+/* #region || Hamburger Menu & Animation (Mobile) from Mikael Ainalme ( https://codepen.io/ainalem/pen/LJYRxz?editors=1100 ) */
 nav label {
 	width: 115px;
 	position: absolute;
@@ -372,18 +377,22 @@ footer {
 
 /* #region || Medium 768px */
 @media screen and (min-width: 768px) {
-/* ------- NAVIGATION ------- */
-nav a {
-	font-size: 18px;
+/* ------- NAVIGATION 768px ------- */
+#signupnav {
+	position: fixed;
+	top: -6px;
+	left: 50%;
+	transform: translateX(-50%);
+	max-height: 100%;
+	z-index: 9999;
+	background-color: var(--white);
 }
-#dropmenu ul li {
-	padding: 5px;
-}
-/* ------- ------- */
+/* ------- PAGES 768px ------- */
 main img { 
 	max-width: 75vw;
 	height: auto;
 }
+/* ------- STUDIO 768px ------- */
 #int-gallery {
 	display: flex;
 	flex-direction: row;
@@ -397,25 +406,23 @@ main img {
 	width: auto;
 	max-height: 300px;
 }
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! I need to make the images fit across in a row*/
+/* ------- PROGRAMS 768px ------- */
 .summer-images {
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
-	flex-grow: 1 1 0;
-	max-width: 900px;
+	flex-grow: 1;
+	max-width: 100%;
 }
 .summer-images img {
-	height: 100%;
+	flex: 1;
+	min-width: 0;
+	height: auto;
 	width: 100%;
+	object-fit: cover;
+	border-radius: 8px;
 }
-.flex {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-/* ------- FOOTER 768 ------- */
+/* ------- FOOTER 768px ------- */
 #flex-footer {
 	margin: 0 auto;
 	display: flex;
@@ -441,28 +448,37 @@ footer {
 
 /* #region || Large 992px */
 @media screen and (min-width: 992px) {
+/* ------- Classes 992px ------- */
 .center {
 	gap: 100px;
 }
-	nav label {
+/* ------- NAVIGATION 992px ------- */
+nav label {
 	display: none;
+}
+nav a {
+	font-size: 18px;
 }
 #mainnav {
 	height: 50px;
 }
 #dropmenu {
-	display: block;
+	overflow: visible;
+	max-height: 100dvh;
+	justify-content: space-evenly;
 }
 #dropmenu ul {
-	display: flex;
-	justify-content: space-around;
-	height: 50px;
-	top: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	height: fit-content;
+	/*top: 0;*/
+	/*gap: 20px;*/
 }
-#dropmenu ul li {
+#dropmenu ul li:not(:last-child) {
 	position: relative;
 	font-size: 16px;
 	text-align: center;
+	padding: 0;
 }
 #dropmenu > ul > li > ul {
 	flex-direction: column;
@@ -470,6 +486,16 @@ footer {
 	width: 100%;
 	padding-top: 10px;
 }
+#signupnav {
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	transform: none;
+	max-height: 100%;
+	z-index: 9999;
+	background-color: transparent;
+}
+/* ------- 992px Styles ------- */
 main {
 	font-size: 18px;
 }
