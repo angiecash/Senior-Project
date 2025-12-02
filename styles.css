@@ -1,14 +1,24 @@
 /* #region || Variables */
 :root {
+
+/* ------- COLORS ------- */
 	--dkpurple: #561b75;
 	--transparent-purple: #561b7580;
 	--mdpurple: #ca95e7;
 	--ltpurple: #ead5f5;
     --black: #000000;
     --white: #ffffff;
-}
-/* #endregion || Variables */
 
+/* ------- FONT ------- */
+	--pri-font: "latienne-pro", serif;
+	--sec-font:  "adorn-smooth-slab-serif", serif;
+	--titles: "adorn-smooth-condensed-sans", sans-serif;
+
+	--light: 300;
+	--regular: 400;
+	--bold: 700;
+	/* #endregion || Variables */
+}
 /* #region || Skip Link Styles */
 #skip {
 	position: absolute;
@@ -58,33 +68,54 @@ body {
 	margin: 0 auto;
 	line-height: normal;
 	background-color: white;
+	font-size: 16px; 
+	font-family: var(--pri-font);
+	font-weight: var(--regular);
 }
 a {
 	font-size: 24px;
 	text-decoration: none;
 	color: var(--dkpurple);
-	font-weight: 700;
+	font-weight: var(--bold);
 }
 h1, h2, h3, h4, h5 {
-	font-family: sans-serif;
-	font-weight: 700;
+	font-family: var(--pri-font);
 	color: var(--dkpurple);
+}
+h1 {
+	font-size: 2.5em;
+	font-weight: var(--bold);
 }
 h2 {
 	font-size: 1.5em;
+	font-weight: var(--bold);
 }
 h3 {
 	font-size: 1.17em;
+	font-weight: var(--bold);
 }
 h4 {
 	font-size: 1em;
+	font-weight: var(--bold);
 }
 h5 {
 	font-size: .83em;
+	font-weight: var(--bold);
 }
 main {
 	margin: 50px auto;
 	padding: 20px;
+}
+#main-content h1, h2, h3, h4, h5 {
+	margin-left: 25px;
+	max-width: 70vw;
+}
+#main-content p {
+	margin: 0 auto;
+	max-width: 70vw;
+}
+#main-content .dfj-button {
+	margin: 10px auto;
 }
 /* ------- GENERAL CLASSES ------- */
 .center {
@@ -100,6 +131,12 @@ main {
 }
 .active {
 	color: var(--mdpurple);
+}
+.left {
+	display: flex;
+}
+.right {
+	display: flex;
 }
 /* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
@@ -227,6 +264,37 @@ nav {
 	font-size: 1em;
 	font-weight: 400;
 }
+/* ------- FAQ (General Styles) ------- */
+  #faq-title {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-content: center;
+  }
+  #faq-title img {
+	max-height: 150px;
+	border-radius: 0;
+  }
+  .magic-trick {
+	display: none;
+  }
+  #faq-container {
+	margin-left: 20px;
+  }
+  #faq-container img {
+	border-radius: 0;
+	max-width: 50vw;
+  }
+  details summary {
+	padding: 10px;
+  }
+  details div {
+	margin-left: 25px;
+	background-color: var(--mdpurple);
+	padding: 15px;
+	border-radius: 15px;
+	margin-bottom: 20px;
+  }
 /* ------- FOOTER (General Styles)------- */
 footer {
 	line-height: 1.5em;
@@ -510,6 +578,16 @@ main img {
 	object-fit: cover;
 	border-radius: 8px;
 }
+/* ------- FAQ 768px ------- */
+  #faq-title {
+	display: grid;
+	grid-template-columns: 10% 45% 10%;
+	align-items: center;
+	justify-items: center;
+  }
+  .magic-trick {
+	display: block;
+  }
 /* ------- FOOTER 768px ------- */
 #flex-footer {
 	margin: 0 auto;
@@ -579,7 +657,19 @@ nav a {
 	top: 60px;
 	z-index: 9999;
 	background-color: transparent;
-	transform: translateX(170%);
+	transform: translateX(150%);
+}
+/* ------- MAIN ------- */
+#main-content h1, h2, h3, h4, h5 {
+	margin-left: 50px;
+	max-width: 65vw;
+}
+#main-content p {
+	margin: 0 auto;
+	max-width: 65vw;
+}
+#main-content .dfj-button {
+	margin: 10px auto;
 }
 /* ------- 992px Styles ------- */
 main {
@@ -592,11 +682,8 @@ main img {
 .person {
 	height: 395px;
 }
+#schedule img {
+	max-width: 50vw;
+}
 }
 /* #endregion || Large 992px */
-
-/* #region || Extra Large 1200px 
-@media screen and (min-width: 1200px) {
-
-}
-/* #endregion || Extra Large 1200px */
