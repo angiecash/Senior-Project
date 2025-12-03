@@ -225,6 +225,13 @@ nav {
 	width: 100%;
 	gap: 20px;
 }
+.programs {
+	background-image: url("images/aftercare.avif");
+	background-size: contain;
+	background-position: top center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+}
 /* ------- PARTIES (General Styles) ------- */
 #parties {
 	background-image: url("images/events.avif");
@@ -235,8 +242,8 @@ nav {
 }
 .party {
 	padding: 15px;
-	box-shadow: var(--transparent-purple) 2px 2px 8px 2px;
-	background-color: #FFFFFFC0;
+	box-shadow: var(--transparent-purple) 10px 10px 18px 10px;
+	background-color: #FFFFFFCC;
 	color: var(--dkpurple);
 	border-radius: 15px;
 	margin: 10px auto;
@@ -244,6 +251,15 @@ nav {
 	line-height: 1;
 	display: flex;
 	flex-direction: column;
+}
+.card {
+	background-color: var(--ltpurple);
+	color: var(--dkpurple);
+	padding: 20px;
+	border-radius: 15px;
+	outline: 5px solid var(--dkpurple); 
+	font-family: var(--sec-font);
+	font-weight: 400;
 }
 /* ------- JOY COMPANY (General Styles) ------- */
 .company {
@@ -641,7 +657,7 @@ nav a {
 #dropmenu ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	height: fit-content;
+	height: 100px;
 }
 #dropmenu ul li {
 	padding: 0;
