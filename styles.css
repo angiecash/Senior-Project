@@ -139,6 +139,10 @@ main {
 .right {
 	display: flex;
 }
+.shrink {
+	max-width: 300px;
+	height: auto;
+}
 /* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
 	display: block;
@@ -231,6 +235,16 @@ nav {
 	background-position: top center;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
+}
+.programs-intro {
+	text-align: center;
+	background-color: #FFFFFFBB;
+	
+}
+.programs-intro h3, .programs-intro h4 {
+	margin: 0 auto;
+	font-weight: 700;
+	font-family: var(--sec-font);
 }
 /* ------- PARTIES (General Styles) ------- */
 #parties {
@@ -468,6 +482,9 @@ main img {
 	margin: 0 auto;
 }
 /* ------- INSTRUCTOR GALLERY (Mobile) ------- */
+#instructors ul {
+	margin-left: 50px;
+}
 #int-gallery {
 	display: flex;
 	flex-direction: column;
@@ -547,6 +564,9 @@ main img {
 #int-gallery .person img {
 	width: auto;
 	max-height: 300px;
+}
+#instructors ul {
+	margin-left: 200px;
 }
 /* ------- CLASSES 768px ------- */
 #genre-gallery {
