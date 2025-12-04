@@ -1,3 +1,5 @@
+/* GIT480 Senior Project: Angela Cash --> */
+/* Validated 12/3/2025: https://jigsaw.w3.org/css-validator/#validate_by_input*/
 /* #region || Variables */
 :root {
 
@@ -109,12 +111,11 @@ main {
 	padding: 20px;
 }
 #main-content h1, h2, h3, h4, h5 {
-	margin-left: 25px;
-	max-width: 70vw;
+	text-align: center;
 }
-#main-content p {
+#primary p {
 	margin: 0 auto;
-	max-width: 70vw;
+	max-width: 450px;	
 }
 #main-content .dfj-button {
 	margin: 10px auto;
@@ -145,6 +146,10 @@ main {
 .shrink {
 	max-width: 300px;
 	height: auto;
+}
+.bold {
+	font-weight: 700;
+	text-decoration: underline;
 }
 /* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
@@ -373,6 +378,7 @@ footer a:hover {
 	grid-column: 1 / span 1;
 	position: relative;
 	top: 0;
+	z-index: 9999;
 }
 /* ------- NAVIGATION (Mobile) ------- */
 /* #portal is for Sign Up and Login links, to be placed in the dropdown menu  or top of screen*/
@@ -382,11 +388,11 @@ footer a:hover {
 }
 #dropmenu ul {
 	background-color: var(--ltpurple);
-	top: 85px;
+	top: 60px;
 	width: 100%;
 	text-align: center;
 	left: 0;
-	height: 100dvh;
+	/*height: 100dvh;*/
 }
 #dropmenu ul li {
 	padding: 30px;
@@ -404,20 +410,9 @@ footer a:hover {
 	display: block;
 	margin: 0 15px;
 }
-/* THIS IS FOR SUBMENUS THAT ARE CURRENTLY HIDDEN */
-#mainnav ul.submenu {
-	text-align: end;
-	visibility:  hidden;
-}
 #mainnav ul li a:hover {
 	font-weight: 700;
 }
-/* THIS IS NEEDED FOR THE SUBMENUS
-#mainnav ul li:hover > ul.submenu li {
-	visibility: visible;
-	background-color: var(--ltpurple);
-}
-*/
 /* #region || Hamburger Menu & Animation (Mobile) from Mikael Ainalme ( https://codepen.io/ainalem/pen/LJYRxz?editors=1100 ) */
 nav label {
 	width: 115px;
@@ -551,6 +546,18 @@ main img {
 	max-width: 75vw;
 	height: auto;
 }
+.pri-content {
+	display: flex;
+	flex-direction: column;
+
+}
+.pri-content img {
+	text-align: left;
+}
+blockquote {
+	max-width: 350px;
+	margin-left: 50%;
+}
 /* ------- STUDIO 768px ------- */
 #int-gallery {
 	display: flex;
@@ -649,6 +656,7 @@ main img {
 }
 footer {
 	font-size: 18px;
+	margin-top: 15px;
 }
 }
 /* #endregion || Medium 768px */
@@ -696,7 +704,7 @@ nav a {
 }
 #signupnav {
 	position: absolute;
-	top: 60px;
+	top: 100px;
 	z-index: 9999;
 	background-color: transparent;
 	transform: translateX(150%);
@@ -706,10 +714,11 @@ nav a {
 #main-content h1, h2, h3, h4, h5 {
 	margin-left: 50px;
 	max-width: 65vw;
+
 }
 #main-content p {
-	margin: 0 auto;
-	max-width: 65vw;
+	/*margin-left: 75px;*/
+	max-width: 45vw;
 }
 #main-content .dfj-button {
 	margin: 10px auto;

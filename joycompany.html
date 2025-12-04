@@ -1,3 +1,5 @@
+<!-- GIT480 Senior Project: Angela Cash -->
+<!-- Validated 12/3/2025: https://validator.w3.org/  --> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,186 +27,149 @@
     <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet">
     
-    </head>
-    <body>
-        <a id="skip" href="#main-content">Skip to Main Content</a>
-        
-        <header>
-        <h1 class="sr-only">Dancing For Joy</h1>  
-        <img id="logo" src="images/logo.png" alt="Dancing for Joy Logo" height="80">
-        
-        <nav id="mainnav">
-            <h2 class="sr-only">Navigation</h2>
+  </head>
+  <body>
+    <a id="skip" href="#main-content">Skip to Main Content</a>
+      
+    <header>
+      <h1 class="sr-only">Dancing For Joy</h1>  
+      <img id="logo" src="images/logo.png" alt="Dancing for Joy Logo" height="80">
+      
+      <nav id="mainnav">
+        <h2 class="sr-only">Navigation</h2>
 
-            <!-- hamburger menu -->
-            <input id="dropdown" type="checkbox">
-            <label for="dropdown">
-            <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
-                <path
-                    class="line top"
-                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-                <path
-                    class="line middle"
-                    d="m 30,50 h 40" />
-                <path
-                    class="line bottom"
-                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-            </svg>
-            </label>
+        <!-- hamburger menu -->
+        <input id="dropdown" type="checkbox">
+        <label for="dropdown">
+          <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path
+              class="line top"
+              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path
+              class="line middle"
+              d="m 30,50 h 40" />
+            <path
+              class="line bottom"
+              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+          </svg>
+        </label>
 
-            <!-- Collapsible Menu -->
-            <div id="dropmenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
+        <!-- Collapsible Menu -->
+        <div id="dropmenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="studio.html">Studio</a></li>
+            <li><a href="classes.html">Classes</a>li>
+            <li><a href="programs.html">Programs</a> </li>
+            <li><a href="joycompany.html" class="active">Joy Company</a></li>
+            <li><a href="parties.html">Parties</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="signupnav"><a href="https://app.gostudiopro.com/online/dancingforjoy4" class="dfj-button" target="_blank">Sign Up | Parent Portal</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-                <li><a href="studio.html">Studio</a>
-                <ul class="submenu">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Instructors</a></li>
-                    <li><a href="#">Season</a></li>
-                    <li><a href="#">Recital</a></li>
-                    <li><a href="#">Events</a></li>
-                </ul>
-                </li>
+    <main id="main-content">
+      <section class="intro">
+        <h2>Joy Company</h2>
+        <h3>Competition Teams</h3>
+        <img src="images/allComp.avif" alt="">
+        <a href="#calendar" class="dfj-button">Joy Company Calendar</a>
+        <p>The Joy Company Competition Teams have the opportunity to impact the community as well a chance to grow individually as a dancer!  All of the Joy Company Teams will compete in competitions throughout the year. The teams generally do around three mandatory competitions & optional competitions are offered to all throughout the year.</p>
 
-                <li><a href="classes.html">Classes</a>
-                <ul class="submenu">
-                    <li><a href="#">Genres</a></li>
-                    <li><a href="#">Youth Classes</a></li>
-                    <li><a href="#">Adult Classes</a></li>
-                    <li><a href="#">Tuition</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Dress Code</a></li>
-                </ul>
-                </li>
+        <p>Joy Company dancers complete a weekly curriculum of classes designed to develop them technically as dancers.  They will be placed in ballet, jazz, lyrical and/or hip hop classes to help them become a well- rounded dancer. Additionally, the company members will attend one weekly company class together where they will work on technical elements and choreography as a team.</p>
+        <p>The dancers will be encouraged to pursue personal growth and community impact as well.  With that, the Company dancers will perform monthly in community outreach events such as; senior living homes, children's homes, and local festivals. </p>
+        <a href="privatelessons4dfj@gmail.com" class="dfj-button">Private Lesson Requests</a>
+        <img src="images/allComp2.avif" alt="">
 
-                <li><a href="programs.html">Programs</a>
-                <ul class="submenu">
-                    <li><a href="#">Aftercare</a></li>
-                    <li><a href="#">Summer</a></li>
-                </ul>
-                </li>
+        <h3>Congratulations to the 2025-2026 Joy Company Dancers</h3>
+        <div id="company-gallery">
+          <div class="company odd">
+            <img src="images/joyBundles.avif" alt="">
+            <p>Joy Bundles</p>
+            <p>Coach: Mrs. Heather</p>
+          </div>
 
-                <li><a href="joycompany.html" class="active">Joy Company</a>
-                <ul class="submenu">
-                    <li><a href="#">Teams</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Private Lessons</a></li>
-                </ul>
-                </li>
+          <div class="company even">
+            <img src="images/joyIgnite.avif" alt="">
+            <p>Joy Ignite</p>
+            <p>Coach: Ms. Hannah</p>
+          </div>
 
-                <li><a href="parties.html">Parties</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="signupnav"><a href="https://app.gostudiopro.com/online/dancingforjoy4" class="dfj-button" target="_blank">Sign Up | Parent Portal</a></li>
-              </ul>
-            </div>
-        </nav>
-        </header>
+          <div class="company odd">
+            <img src="images/joyLights.avif" alt="">
+            <p>Joy Lights</p>
+            <p>Coach: Ms. Tricia</p>
+          </div>
 
-        <main id="main-content">
-            <section class="intro">
-                <h2>Joy Company</h2>
-                <h3>Competition Teams</h3>
-                <img src="images/allComp.avif" alt="">
-                <a href="#calendar" class="dfj-button">Joy Company Calendar</a>
-                <p>The Joy Company Competition Teams have the opportunity to impact the community as well a chance to grow individually as a dancer!  All of the Joy Company Teams will compete in competitions throughout the year. The teams generally do around three mandatory competitions & optional competitions are offered to all throughout the year.</p>
+          <div class="company even">
+            <img src="images/joyFire.avif" alt="">
+            <p>Joy Fire</p>
+            <p>Coach: Ms. Tricia</p>
+          </div>
 
-                <p>Joy Company dancers complete a weekly curriculum of classes designed to develop them technically as dancers.  They will be placed in ballet, jazz, lyrical and/or hip hop classes to help them become a well- rounded dancer. Additionally, the company members will attend one weekly company class together where they will work on technical elements and choreography as a team.</p>
+          <div class="company odd">
+            <img src="images/joyIntensity.avif" alt="">
+            <p>Joy Intensity</p>
+            <p>Coach: Ms. Keara</p>
+          </div>
 
-                <p>The dancers will be encouraged to pursue personal growth and community impact as well.  With that, the Company dancers will perform monthly in community outreach events such as; senior living homes, children's homes, and local festivals. </p>
+          <div class="company even">
+            <img src="images/joyRadiance.avif" alt="">
+            <p>Joy Radiance</p>
+            <p>Coach: Ms. CJ</p>
+          </div>
 
-                <a href="privatelessons4dfj@gmail.com" class="dfj-button">Private Lesson Requests</a>
+          <div class="company odd">
+            <img src="images/joySurge.avif" alt="">
+            <p>Joy Surge</p>
+            <p>Coach: Ms. Keara</p>
+          </div>
 
-                <img src="images/allComp2.avif" alt="">
+          <div class="company even">
+            <img src="images/joySoleil.avif" alt="">
+            <p>Joy Soleil</p>
+            <p>Coach: Ms. CJ</p>
+          </div>
 
-                <h3>Congratulations to the 2025-2026 Joy Company Dancers</h3>
-                
-                <div id="company-gallery">
-                  <div class="company odd">
-                    <img src="images/joyBundles.avif" alt="">
-                    <p>Joy Bundles</p>
-                    <p>Coach: Mrs. Heather</p>
-                  </div>
+          <div class="company odd">
+            <img src="images/joyLLBeg.avif" alt="">
+            <p>Joy Lamplighters (Beginner/Intermediate)</p>
+            <p>Coach: Ms. Tricia</p>
+          </div>
 
-                  <div class="company even">
-                    <img src="images/joyIgnite.avif" alt="">
-                    <p>Joy Ignite</p>
-                    <p>Coach: Ms. Hannah</p>
-                  </div>
+          <div class="company even">
+            <img src="images/joyLLInt.avif" alt="">
+            <p>Joy Lamplighters (Intermediate/Advanced)</p>
+            <p>Coach: Ms. Trish</p>
+          </div>
+        </div>
 
-                  <div class="company odd">
-                    <img src="images/joyLights.avif" alt="">
-                    <p>Joy Lights</p>
-                    <p>Coach: Ms. Tricia</p>
-                  </div>
+      </section>
+      <hr>
+      <section id="calendar">
+        <h2>Joy Company calendar</h2>
+        <h3>December</h3>
+        <p>12/06: Earthshakers Competition Fees Due (Optional)</p>
+        <p>12/15 - 12/20: In House Christmas Joy Showcase Performance</p>
+        <p>12/22 - 12/31/2025: WINTER BREAK | HCPS Studio Closed</p>
+        <p>12/25: Christmas</p>
 
-                  <div class="company even">
-                    <img src="images/joyFire.avif" alt="">
-                    <p>Joy Fire</p>
-                    <p>Coach: Ms. Tricia</p>
-                  </div>
-
-                  <div class="company odd">
-                    <img src="images/joyIntensity.avif" alt="">
-                    <p>Joy Intensity</p>
-                    <p>Coach: Ms. Keara</p>
-                  </div>
-
-                  <div class="company even">
-                    <img src="images/joyRadiance.avif" alt="">
-                    <p>Joy Radiance</p>
-                    <p>Coach: Ms. CJ</p>
-                  </div>
-
-                  <div class="company odd">
-                    <img src="images/joySurge.avif" alt="">
-                    <p>Joy Surge</p>
-                    <p>Coach: Ms. Keara</p>
-                  </div>
-
-                  <div class="company even">
-                    <img src="images/joySoleil.avif" alt="">
-                    <p>Joy Soleil</p>
-                    <p>Coach: Ms. CJ</p>
-                  </div>
-
-                  <div class="company odd">
-                    <img src="images/joyLLBeg.avif" alt="">
-                    <p>Joy Lamplighters (Beginner/Intermediate)</p>
-                    <p>Coach: Ms. Tricia</p>
-                  </div>
-
-                  <div class="company even">
-                    <img src="images/joyLLInt.avif" alt="">
-                    <p>Joy Lamplighters (Intermediate/Advanced)</p>
-                    <p>Coach: Ms. Trish</p>
-                  </div>
-                </div>
-
-            </section>
-            <hr>
-            <section id="calendar">
-              <h2>Joy Company calendar</h2>
-              <h3>December</h3>
-              <p>12/06: Earthshakers Competition Fees Due (Optional)</p>
-              <p>12/15 - 12/20: In House Christmas Joy Showcase Performance</p>
-              <p>12/22 - 12/31/2025: WINTER BREAK | HCPS Studio Closed</p>
-              <p>12/25: Christmas</p>
-
-              <h2>Company Fee Schedule</h2>
-              <h3>2025</h3>
-              <p>11/15: ShowBiz Competition Fees Due (required)</p>
-              <p>12/6: Earthshakers Competition Fees Due (optional)</p>
-              <h3>2026</h3>
-              <p>1/15: DreamMaker National Talent Competition Fee Due (Required)</p>
-              <p>2/1: Nextar Competition Fee Due (Optional)</p>
-              <p>2/20: Spring Recital Costume Fees Due</p>
-              <p>4/1: Spring Recital Fee Due</p>
-            </section>
-            <hr>
-        </main>
-        
+        <h2>Company Fee Schedule</h2>
+        <h3>2025</h3>
+        <p>11/15: ShowBiz Competition Fees Due (required)</p>
+        <p>12/6: Earthshakers Competition Fees Due (optional)</p>
+        <h3>2026</h3>
+        <p>1/15: DreamMaker National Talent Competition Fee Due (Required)</p>
+        <p>2/1: Nextar Competition Fee Due (Optional)</p>
+        <p>2/20: Spring Recital Costume Fees Due</p>
+        <p>4/1: Spring Recital Fee Due</p>
+      </section>
+      <hr>
+    </main>
+      
     <footer>
       <div id="flex-footer">
         <!-- Connect -->
@@ -243,6 +208,6 @@
         <i>This site is for educational purposes only.</i></p>
       </section>
     </footer>
-        
-    </body>
+      
+  </body>
 </html>

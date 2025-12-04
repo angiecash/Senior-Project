@@ -1,3 +1,5 @@
+<!-- GIT480 Senior Project: Angela Cash -->
+<!-- Validated 12/3/2025: https://validator.w3.org/  --> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,418 +27,384 @@
     <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet">
     
-    </head>
-    <body>
-        <a id="skip" href="#main-content">Skip to Main Content</a>
-        
-        <header>
-        <h1 class="sr-only">Dancing For Joy</h1>  
-        <img id="logo" src="images/logo.png" alt="Dancing for Joy Logo" height="80">
-        
-        <nav id="mainnav">
-            <h2 class="sr-only">Navigation</h2>
+  </head>
+  <body>
+    <a id="skip" href="#main-content">Skip to Main Content</a>
+      
+    <header>
+      <h1 class="sr-only">Dancing For Joy</h1>  
+      <img id="logo" src="images/logo.png" alt="Dancing for Joy Logo" height="80">
+      
+      <nav id="mainnav">
+        <h2 class="sr-only">Navigation</h2>
 
-            <!-- hamburger menu -->
-            <input id="dropdown" type="checkbox">
-            <label for="dropdown">
-            <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
-                <path
-                    class="line top"
-                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-                <path
-                    class="line middle"
-                    d="m 30,50 h 40" />
-                <path
-                    class="line bottom"
-                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-            </svg>
-            </label>
+        <!-- hamburger menu -->
+        <input id="dropdown" type="checkbox">
+        <label for="dropdown">
+          <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path
+                class="line top"
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path
+                class="line middle"
+                d="m 30,50 h 40" />
+            <path
+                class="line bottom"
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+          </svg>
+        </label>
 
-            <!-- Collapsible Menu -->
-            <div id="dropmenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
+        <!-- Collapsible Menu -->
+        <div id="dropmenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="studio.html">Studio</a></li>
+            <li><a href="classes.html">Classes</a>li>
+            <li><a href="programs.html">Programs</a> </li>
+            <li><a href="joycompany.html">Joy Company</a></li>
+            <li><a href="parties.html">Parties</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="signupnav"><a href="https://app.gostudiopro.com/online/dancingforjoy4" class="dfj-button" target="_blank">Sign Up | Parent Portal</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-                <li><a href="studio.html">Studio</a>
-                <ul class="submenu">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Instructors</a></li>
-                    <li><a href="#">Season</a></li>
-                    <li><a href="#">Recital</a></li>
-                    <li><a href="#">Events</a></li>
-                </ul>
-                </li>
+    <main id="main-content">
+      <section class="intro container">
+        <div id="faq-title">
+          <img src="images/faqb.avif" alt="" class="magic-trick"><h2>Frequently Asked Questions</h2><img src="images/faqa.avif" alt="" class="magic-trick">
+        </div>
+        <div id="faq-container">
+          <details>
+            <summary>How do I register for classes?</summary>
+            <div>
+              <ol>
+                <li>Click the link below</li>
+                <li>Account information is the parent's information</li>
+                <li>Add your student(s)</li>
+                <li>All waivers must be accepted</li>
+                <li>Save account and log in.</li>
+                <li>Choose your class!</li>
+              </ol>
+              <a href="https://app.gostudiopro.com/apps/api_classes_resp.php?id=zaqlxajd29jd2576c864e0d2d609jasdklj21dx576c864e0d37c" class="dfj-button" target="_blank">Register Here</a>
+            </div>
+          </details>
+          <h3 class="sr-only">General Questions</h3>
+          <details>
+            <summary>Is there a registration fee?</summary>
+            <div>
+              <p>Yes, there is a $35 registration fee per dancer each year.</p>
+            </div>
+          </details>
 
-                <li><a href="classes.html">Classes</a>
-                <ul class="submenu">
-                    <li><a href="#">Genres</a></li>
-                    <li><a href="#">Youth Classes</a></li>
-                    <li><a href="#">Adult Classes</a></li>
-                    <li><a href="#">Tuition</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Dress Code</a></li>
-                </ul>
-                </li>
-
-                <li><a href="programs.html">Programs</a>
-                <ul class="submenu">
-                    <li><a href="#">Aftercare</a></li>
-                    <li><a href="#">Summer</a></li>
-                </ul>
-                </li>
-
-                <li><a href="joycompany.html">Joy Company</a>
-                <ul class="submenu">
-                    <li><a href="#">Teams</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Private Lessons</a></li>
-                </ul>
-                </li>
-
-                <li><a href="parties.html">Parties</a></li>
-                <li><a href="faq.html" class="active">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="signupnav"><a href="https://app.gostudiopro.com/online/dancingforjoy4" class="dfj-button" target="_blank">Sign Up | Parent Portal</a></li>
+          <details>
+            <summary>What is classroom etiquette?</summary>
+            <div>
+              <ul>
+                <li>Dancers and Teachers show kindness, listen carefully, and try their best every class.</li>
+                <li>Dancers and Teachers use words that are respectful and encouraging—no potty talk or silly jokes/actions that distract others.</li>
+                <li>The studio is a place to learn, have fun, and help everyone feel safe and included.</li>
+                <li>Respect the space, your teacher, and each other. Come prepared, listen actively, and give your best effort.</li>
+                <li>Celebrate progress— for you and others. Stay positive, stay kind, and always leave the studio better than you found it—inside and out.</li>
+                <li>Let's dance with happy hearts, good manners and JOY!</li>
               </ul>
             </div>
-        </nav>
-        </header>
+          </details>
 
-        <main id="main-content">
-            <section class="intro container">
-              <div id="faq-title">
-                <img src="images/faqb.avif" alt="" class="magic-trick"><h2>Frequently Asked Questions</h2><img src="images/faqa.avif" alt="" class="magic-trick">
-              </div>
-              <div id="faq-container">
+          <h3>Tuition</h3>
+          <details>
+            <summary>How does tuition work?</summary>
+            <div>
+              <p>Tuition is an annual fee broken down into 10 equal installments, August - May of each dance year.</p>
+              <p>Late enrollments are not prorated.</p>
+              <p>Shorter months are not prorated, nor are you charged extra fees for longer months.</p>
+              <p>Summer is billed on June 16th and July 16th as it is a special 8 week ssession.</p>
+              <p>Contact us to inquire about Military or Foster Care discounts.</p>
+            </div>
+          </details>
+          
+          <details>
+            <summary>What are the tuition fees?</summary>
+            <div>
+              <table>
+                <tr>
+                  <th>Weekly Class Count</th>
+                  <th>Monthly Tuition</th>
+                </tr>
+                <tr>
+                  <td>1 Class</td>
+                  <td>$85/month</td>
+                </tr>
+                <tr>
+                  <td>2 Classes</td>
+                  <td>$160/month</td>
+                </tr>
+                <tr>
+                  <td>3 Classes</td>
+                  <td>$225/month</td>
+                </tr>
+                <tr>
+                  <td>4 Classes</td>
+                  <td>$280/month</td>
+                </tr>
+                <tr>
+                  <td>5 Classes</td>
+                  <td>$325/month</td>
+                </tr>
+                <tr>
+                  <td>6 Classes</td>
+                  <td>$360/month</td>
+                </tr> 
+                <tr>
+                  <td>7 Classes</td>
+                  <td>$385/month</td>
+                </tr>
+              </table>
+              <ul>
+                <li>Each class over 7 total classes is charged at a rate of $20/class.</li>
+                <li>Our tuition schedule includes an automatic multi-class and sibling discount, as the class count is calculated per family and the price per class reduces when more classes are taken.</li>
+                <li>Please see our Payment Policy & Guidelines Agreement in the waivers section of your portal for more information.</li>
+              </ul>
+            </div>
+          </details>
 
-                <details>
-                  <summary>How do I register for classes?</summary>
-                  <div>
-                    <ol>
-                      <li>Click the link below</li>
-                      <li>Account information is the parent's information</li>
-                      <li>Add your student(s)</li>
-                      <li>All waivers must be accepted</li>
-                      <li>Save account and log in.</li>
-                      <li>Choose your class!</li>
-                    </ol>
-                    <a href="https://app.gostudiopro.com/apps/api_classes_resp.php?id=zaqlxajd29jd2576c864e0d2d609jasdklj21dx576c864e0d37c" class="dfj-button" target="_blank">Register Here</a>
-                  </div>
-                </details>
-                <h3 class="sr-only">General Questions</h3>
-                <details>
-                  <summary>Is there a registration fee?</summary>
-                  <div>
-                    <p>Yes, there is a $35 registration fee per dancer each year.</p>
-                  </div>
-                </details>
-
-                <details>
-                  <summary>What is classroom etiquette?</summary>
-                  <div>
-                    <ul>
-                      <li>Dancers and Teachers show kindness, listen carefully, and try their best every class.</li>
-                      <li>Dancers and Teachers use words that are respectful and encouraging—no potty talk or silly jokes/actions that distract others.</li>
-                      <li>The studio is a place to learn, have fun, and help everyone feel safe and included.</li>
-                      <li>Respect the space, your teacher, and each other. Come prepared, listen actively, and give your best effort.</li>
-                      <li>Celebrate progress— for you and others. Stay positive, stay kind, and always leave the studio better than you found it—inside and out.</li>
-                      <li>Let's dance with happy hearts, good manners and JOY!</li>
-                    </ul>
-                  </div>
-                </details>
-
-                <h3>Tuition</h3>
-                <details>
-                  <summary>How does tuition work?</summary>
-                  <div>
-                    <p>Tuition is an annual fee broken down into 10 equal installments, August - May of each dance year.</p>
-                    <p>Late enrollments are not prorated.</p>
-                    <p>Shorter months are not prorated, nor are you charged extra fees for longer months.</p>
-                    <p>Summer is billed on June 16th and July 16th as it is a special 8 week ssession.</p>
-                    <p>Contact us to inquire about Military or Foster Care discounts.</p>
-                  </div>
-                </details>
-                
-                <details>
-                  <summary>What are the tuition fees?</summary>
-                  <div>
-                    <table>
-                      <tr>
-                        <th>Weekly Class Count</th>
-                        <th>Monthly Tuition</th>
-                      </tr>
-                      <tr>
-                        <td>1 Class</td>
-                        <td>$85/month</td>
-                      </tr>
-                      <tr>
-                        <td>2 Classes</td>
-                        <td>$160/month</td>
-                      </tr>
-                      <tr>
-                        <td>3 Classes</td>
-                        <td>$225/month</td>
-                      </tr>
-                      <tr>
-                        <td>4 Classes</td>
-                        <td>$280/month</td>
-                      </tr>
-                      <tr>
-                        <td>5 Classes</td>
-                        <td>$325/month</td>
-                      </tr>
-                      <tr>
-                        <td>6 Classes</td>
-                        <td>$360/month</td>
-                      </tr> 
-                      <tr>
-                        <td>7 Classes</td>
-                        <td>$385/month</td>
-                      </tr>
-                    </table>
-                      <ul>
-                        <li>Each class over 7 total classes is charged at a rate of $20/class.</li>
-                        <li>Our tuition schedule includes an automatic multi-class and sibling discount, as the class count is calculated per family and the price per class reduces when more classes are taken.</li>
-                        <li>Please see our Payment Policy & Guidelines Agreement in the waivers section of your portal for more information.</li>
-                      </ul>
-                  </div>
-                </details>
-
-                <details>
-                  <summary>When is tuition due?</summary>
-                  <div>
-                    <p>Tuition is due on either the 1st of the month or the first day of classes when a new dance season starts.</p>
-                  </div>
-                </details>
-                
-                <details>
-                  <summary>How do I pay my tuition fees?</summary>
-                  <div>
-                    <p>We now require all families to enroll in AutoPay in the portal or with lobby staff so tuition fees are made automatically without convenience fees. Please email us with any questions</p>
-                    <p>Cash or check payments can be made in the Lobby if pre-paying or carrying a credit balance.</p>
-                  </div>
-                </details>
-              
-                <h3>Dance Attire & Dress Code</h3>
-                <details>
-                  <summary>Where do I order dance attire?</summary>
-                  <div>
-                    <p>Dance shoes can be sized and purchased at Dance Tampa, On Your Toes, or online distributors.</p>
-                    <p>Limited items in stock in the studio!</p>
-                    <a href="https://app.gostudiopro.com/online/dancingforjoy4" class="dfj-button" target="_blank">DSP Leotard Store Front</a>
-                    <p><em>Don't have the required items on hand?  For trial classes, leggings and a comfortable t-shirt are also options.  Please have hair pulled back and secure. Also, please bring a water bottle labeled with your dancer's name on it.</em></p>
-                  </div>
-                </details>
-
-                <details>
-                  <summary>What is the dress code?</summary>
-                  <div>
-                    <details>
-                      <summary>Introductory: Combo & Creative Movement</summary>
-                      <div>
-                        <h4>Combo</h4>
-                        <p>Attire: Yellow tank top leotard with attached yellow skirt and skin-toned tights</p>
-                        <p>Shoes: Skin-toned canvas Ballet shoes, flat Tan or Skin toned Tap shoes, black Grip socks</p>
-                        <p>Hair: in a bun or ponytail</p>
-
-                        <h4>Creative Movement</h4>
-                        <p>Attire: yellow cap sleeve leotard with yellow wrap skirt and skin-toned tights</p>
-                        <p>Shoes: Skin-toned canvas Ballet shoes</p>
-                        <p>Hair: in a bun or ponytail</p>
-                        <img src="images/dressCodeIntro.avif" alt="">
-                      </div>
-                    </details>
-
-                    <details>
-                      <summary>Beginner: 0-2 Years Experience</summary>
-                      <div>
-                      <p>All dancers wear a Mulberry cap sleeve leotard and skin-toned tights unless noted.</p>
-
-                      <h4>BALLET</h4>
-                      <p>Bottoms: Black wrap skirt (optional)</p>
-                      <p>Shoes: Skin-toned canvas ballet shoes</p>
-                      <p>Hair: High bun- Props: 0.5 lb wrist/ankle weights</p>
-
-                      <h4>LYRICAL</h4>
-                      <p>Bottoms: Black fitted shorts or leggings</p>
-                      <p>Shoes: Skin-toned lyrical (Twyla) shoes</p>
-                      <p>Hair: Bun or ponytail</p>
-
-                      <h4>JAZZ & MUSICAL THEATER</h4>
-                      <p>Bottoms: Black fitted shorts or leggings</p>
-                      <p>Shoes: Skin-toned jazz shoes</p>
-                      <p>Hair: Bun or ponytail</p>
-                      <p>Props (Jazz): 0.5 lb wrist/ankle weights</p>
-
-                      <h4>TAP</h4>
-                      <p>Bottoms: Black fitted shorts or leggings</p>
-                      <p>Shoes: Skin-toned theatrical tap shoes (buckled or Velcro preferred)</p>
-                      <p>Hair: Bun or ponytail</p>
-                      <p>Props: 0.5 lb wrist/ankle weights</p>
-
-                      <h4>PRAISE & WORSHIP</h4>
-                      <p>Bottoms: Black fitted shorts or leggings</p>
-                      <p> Shoes: Skin-toned canvas ballet shoes</p>
-                      <p>Hair: Bun or ponytail</p>
-
-                      <h4>ACRO & TRAPEZE</h4>
-                      <p>Bottoms: Black fitted shorts or leggings</p>
-                      <p>Shoes: Black grip socks Dancing for Joy</p>
-                      <p>Bun or ponytail</p>
-                      <img src="images/dressCodeBeginner.avif" alt="">
-                      </div>
-                    </details>
-
-                    <details>
-                      <summary>Intermediate: 3-5 Years Experience</summary>
-                      <div>
-                        <p>All dancers wear a Royal Purple cap sleeve leotard and skin-toned tights unless noted.</p>
-
-                        <h4>Ballet</h4>
-                        <p>Attire: Royal Purple cap sleeve or tank top  leotard with built in bra if needed (no sports bras allowed to show), skin-toned tights, black chiffon wrap skirt</p>
-                        <p>Shoes: Skin Tone Canvas Ballet shoes (pre-pointe or Pointe if approved and in those classes)</p>
-                        <p>Hair: In a high bun- Props: 0.5 lb wrist weights, 1 lb ankle weights</p>
-
-                        <h4>LYRICAL/CONTEMPORARY</h4>
-                        <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Skin Tone Lyrical shoes</p>
-                        <p>Hair: In a bun</p>
-                        <p>Props: Skin-toned knee pads by Blochsox</p>
-
-                        <h4>JAZZ & MUSICAL THEATER</h4>
-                        <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Skin Tone Jazz shoes</p>
-                        <p>Hair: In a bun</p>
-                          
-                        <h4>TAP</h4>
-                        <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: 1.5" Skin Tone Tap shoes</p>
-                        <p>Hair: In a bun
-
-                        <h4>ACRO & TRAPEZE</h4>
-                        <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Black Grip socks</p>
-                        <p>Hair: In a bun or ponytail</p>
-
-                        <h4>PRAISE & WORSHIP</h4>
-                        <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Skin Toned Ballet shoes</p>
-                        <p>Hair: In a bun or ponytail</p>
-                        <img src="images/dressCodeIntermediate.avif" alt="">
-                      </div>
-                    </details>
-
-                    <details>
-                      <summary>Advanced: 5+ Years Experience & JOY Company</summary>
-                      <div>
-                        <p>All dancers must wear a Black cap sleeve or tank top leotard.</p>
-
-                        <h4>BALLET</h4>
-                        <p>Attire: black cap sleeve or tank top (no spaghetti straps) leotard with built-in bra if needed (no sports bras allowed to show), skin-toned tights, black chiffon wrap skirt</p>
-                        <p>Shoes: Skin Tone Canvas Ballet shoes<br>(pre-pointe or Pointe if approved and in those classes)</p>
-                        <p>Hair: In a high bun</p>
-                        <p>Props: 0.5 lb wrist weights, 1 lb ankle weights</p>
-
-                        <h4>LYRICAL/CONTEMPORARY</h4>
-                        <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Skin Tone Lyrical shoes</p>
-                        <p>Hair: In a bun</p>
-                        <p>Props: Skin-toned knee pads by Blochsox</p>
-
-                        <h4>JAZZ & MUSICAL THEATER</h4>
-                        <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Skin Tone Jazz shoes</p>
-                        <p>Hair: In a bun</p>
-                              
-                        <h4>TAP</h4>
-                        <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: 1.5" Skin Tone Tap shoes</p>
-                        <p>Hair: In a bun
-
-                        <h4>ACRO & TRAPEZE</h4>
-                        <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Black Grip socks</p>
-                        <p>Hair: In a bun or ponytail</p>
-
-                        <h4>PRAISE & WORSHIP</h4>
-                        <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
-                        <p>Shoes: Skin Toned Ballet shoes</p>
-                        <p>Hair: In a bun or ponytail skin-toned tights unless noted.</p>
-
-                        <p>*Please note that dancers can wear any color leotard the 2nd week of the month.</p>
-                        <img src="images/dressCodeAdvanced.avif" alt="">
-                      </div>
-                    </details>
-
-                    <details>
-                      <summary>Hip Hop: All Levels</summary>
-                      <div>
-                        <p>Attire: DFJ Hip Hop shirt (available in the studio shop online).</p>
-                        <p>Comfortable loose-fitting black jogger pants or black jersey shorts (no jeans).</p>
-                        <p>Shoes: White Nike sneakers or white “studio” sneakers (reserved for indoor studio use only to protect flooring)</p>
-                        <p>Girls Hair: High or low ponytail</p>
-                        <p>Boys Hair: Pulled back neatly</p>
-                        <img src="images/dressCodeHipHop.avif" alt="">
-                      </div>
-                    </details>
-
-                    <details>
-                      <summary>Boys: All Levels</summary>
-                      <div>
-                        <h4>Introductory: Combo and Creative Movement</h4>
-                        <p>Attire: Plain white T-shirt, black pants or shorts</p>
-                        <p>Shoes: Black canvas ballet shoes, black Tap shoes, black grip socks.</p>
-                        <p>Hair: pulled back</p>
-
-                        <h4>BALLET</h4>
-                        <p>Attire: Plain white T-shirt, black pants or shorts</p>
-                        <p>Shoes: Black Ballet shoes</p>
-                        <p>Hair: Pulled back</p>
-                        <p>Props: .5 lb wrist/ankle weights</p>
-
-                        <h4>LYRICAL</h4>
-                        <p>Attire: Plain white T-shirt, black pants or shorts</p>
-                        <p>Shoes: Skin tone Lyrical (twyla) shoes Level 1 | Black Block Socks Level 2-6</p>
-                        <p>Hair: Pulled back</p>
-
-                        <h4>JAZZ AND MUSICAL THEATER</h4>
-                        <p>Attire: Plain white T-shirt, black pants or shorts</p>
-                        <p>Shoes: Black Jazz shoes</p>
-                        <p>Hair: Pulled Back</p>
-                        <p>Props (Jazz): * Props: .5 lb wrist/ankle weights</p>
-
-                        <h4>TAP</h4>
-                        <p>Attire: Plain white T-shirt, black pants or shorts</p>
-                        <p>Shoes: Black, Tap shoes (flat bottom)</p>
-                        <p>Hair: Pulled Back</p>
-                        <p>Props: * Props: .5 lb wrist/ankle weights</p>
-
-                        <h4>PRAISE AND WORSHIP</h4>
-                        <p>Attire: Any DFJ T-shirt, black pants or shorts</p>
-                        <p>Shoes: Black canvas Ballet shoes</p>
-                        <p>Hair: Pulled Back</p>
-
-                        <h4>ACRO/TRAPEZE</h4>
-                        <p>Attire: Plain white T-shirt, black pants or shorts</p>
-                        <p>Shoes: Black Grip socks</p>
-                        <p>Hair: Pulled Back</p>
-                        <img src="images/dressCodeBoys.avif" alt="">
-                      </div>
-                    </details>
-                  </div>
-                </details>              
-              </div>
-            </section>
-            <hr>
-        </main>
+          <details>
+            <summary>When is tuition due?</summary>
+            <div>
+              <p>Tuition is due on either the 1st of the month or the first day of classes when a new dance season starts.</p>
+            </div>
+          </details>
+          
+          <details>
+            <summary>How do I pay my tuition fees?</summary>
+            <div>
+              <p>We now require all families to enroll in AutoPay in the portal or with lobby staff so tuition fees are made automatically without convenience fees. Please email us with any questions</p>
+              <p>Cash or check payments can be made in the Lobby if pre-paying or carrying a credit balance.</p>
+            </div>
+          </details>
         
+          <h3>Dance Attire & Dress Code</h3>
+          <details>
+            <summary>Where do I order dance attire?</summary>
+            <div>
+              <p>Dance shoes can be sized and purchased at Dance Tampa, On Your Toes, or online distributors.</p>
+              <p>Limited items in stock in the studio!</p>
+              <a href="https://app.gostudiopro.com/online/dancingforjoy4" class="dfj-button" target="_blank">DSP Leotard Store Front</a>
+              <p><em>Don't have the required items on hand?  For trial classes, leggings and a comfortable t-shirt are also options.  Please have hair pulled back and secure. Also, please bring a water bottle labeled with your dancer's name on it.</em></p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What is the dress code?</summary>
+            <div>
+              <details>
+                <summary>Introductory: Combo & Creative Movement</summary>
+                <div>
+                  <h4>Combo</h4>
+                  <p>Attire: Yellow tank top leotard with attached yellow skirt and skin-toned tights</p>
+                  <p>Shoes: Skin-toned canvas Ballet shoes, flat Tan or Skin toned Tap shoes, black Grip socks</p>
+                  <p>Hair: in a bun or ponytail</p>
+
+                  <h4>Creative Movement</h4>
+                  <p>Attire: yellow cap sleeve leotard with yellow wrap skirt and skin-toned tights</p>
+                  <p>Shoes: Skin-toned canvas Ballet shoes</p>
+                  <p>Hair: in a bun or ponytail</p>
+                  <img src="images/dressCodeIntro.avif" alt="">
+                </div>
+              </details>
+
+              <details>
+                <summary>Beginner: 0-2 Years Experience</summary>
+                <div>
+                  <p>All dancers wear a Mulberry cap sleeve leotard and skin-toned tights unless noted.</p>
+
+                  <h4>BALLET</h4>
+                  <p>Bottoms: Black wrap skirt (optional)</p>
+                  <p>Shoes: Skin-toned canvas ballet shoes</p>
+                  <p>Hair: High bun- Props: 0.5 lb wrist/ankle weights</p>
+
+                  <h4>LYRICAL</h4>
+                  <p>Bottoms: Black fitted shorts or leggings</p>
+                  <p>Shoes: Skin-toned lyrical (Twyla) shoes</p>
+                  <p>Hair: Bun or ponytail</p>
+
+                  <h4>JAZZ & MUSICAL THEATER</h4>
+                  <p>Bottoms: Black fitted shorts or leggings</p>
+                  <p>Shoes: Skin-toned jazz shoes</p>
+                  <p>Hair: Bun or ponytail</p>
+                  <p>Props (Jazz): 0.5 lb wrist/ankle weights</p>
+
+                  <h4>TAP</h4>
+                  <p>Bottoms: Black fitted shorts or leggings</p>
+                  <p>Shoes: Skin-toned theatrical tap shoes (buckled or Velcro preferred)</p>
+                  <p>Hair: Bun or ponytail</p>
+                  <p>Props: 0.5 lb wrist/ankle weights</p>
+
+                  <h4>PRAISE & WORSHIP</h4>
+                  <p>Bottoms: Black fitted shorts or leggings</p>
+                  <p> Shoes: Skin-toned canvas ballet shoes</p>
+                  <p>Hair: Bun or ponytail</p>
+
+                  <h4>ACRO & TRAPEZE</h4>
+                  <p>Bottoms: Black fitted shorts or leggings</p>
+                  <p>Shoes: Black grip socks Dancing for Joy</p>
+                  <p>Bun or ponytail</p>
+                  <img src="images/dressCodeBeginner.avif" alt="">
+                </div>
+              </details>
+
+              <details>
+                <summary>Intermediate: 3-5 Years Experience</summary>
+                <div>
+                  <p>All dancers wear a Royal Purple cap sleeve leotard and skin-toned tights unless noted.</p>
+
+                  <h4>Ballet</h4>
+                  <p>Attire: Royal Purple cap sleeve or tank top  leotard with built in bra if needed (no sports bras allowed to show), skin-toned tights, black chiffon wrap skirt</p>
+                  <p>Shoes: Skin Tone Canvas Ballet shoes (pre-pointe or Pointe if approved and in those classes)</p>
+                  <p>Hair: In a high bun- Props: 0.5 lb wrist weights, 1 lb ankle weights</p>
+
+                  <h4>LYRICAL/CONTEMPORARY</h4>
+                  <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Skin Tone Lyrical shoes</p>
+                  <p>Hair: In a bun</p>
+                  <p>Props: Skin-toned knee pads by Blochsox</p>
+
+                  <h4>JAZZ & MUSICAL THEATER</h4>
+                  <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Skin Tone Jazz shoes</p>
+                  <p>Hair: In a bun</p>
+                    
+                  <h4>TAP</h4>
+                  <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: 1.5" Skin Tone Tap shoes</p>
+                  <p>Hair: In a bun
+
+                  <h4>ACRO & TRAPEZE</h4>
+                  <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Black Grip socks</p>
+                  <p>Hair: In a bun or ponytail</p>
+
+                  <h4>PRAISE & WORSHIP</h4>
+                  <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Skin Toned Ballet shoes</p>
+                  <p>Hair: In a bun or ponytail</p>
+                  <img src="images/dressCodeIntermediate.avif" alt="">
+                </div>
+              </details>
+
+              <details>
+                <summary>Advanced: 5+ Years Experience & JOY Company</summary>
+                <div>
+                  <p>All dancers must wear a Black cap sleeve or tank top leotard.</p>
+
+                  <h4>BALLET</h4>
+                  <p>Attire: black cap sleeve or tank top (no spaghetti straps) leotard with built-in bra if needed (no sports bras allowed to show), skin-toned tights, black chiffon wrap skirt</p>
+                  <p>Shoes: Skin Tone Canvas Ballet shoes<br>(pre-pointe or Pointe if approved and in those classes)</p>
+                  <p>Hair: In a high bun</p>
+                  <p>Props: 0.5 lb wrist weights, 1 lb ankle weights</p>
+
+                  <h4>LYRICAL/CONTEMPORARY</h4>
+                  <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Skin Tone Lyrical shoes</p>
+                  <p>Hair: In a bun</p>
+                  <p>Props: Skin-toned knee pads by Blochsox</p>
+
+                  <h4>JAZZ & MUSICAL THEATER</h4>
+                  <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Skin Tone Jazz shoes</p>
+                  <p>Hair: In a bun</p>
+                        
+                  <h4>TAP</h4>
+                  <p>Attire: Royal Purple cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: 1.5" Skin Tone Tap shoes</p>
+                  <p>Hair: In a bun
+
+                  <h4>ACRO & TRAPEZE</h4>
+                  <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Black Grip socks</p>
+                  <p>Hair: In a bun or ponytail</p>
+
+                  <h4>PRAISE & WORSHIP</h4>
+                  <p>Attire: Black cap sleeve leotard, skin-toned tights, black fitted shorts or leggings</p>
+                  <p>Shoes: Skin Toned Ballet shoes</p>
+                  <p>Hair: In a bun or ponytail skin-toned tights unless noted.</p>
+
+                  <p>*Please note that dancers can wear any color leotard the 2nd week of the month.</p>
+                  <img src="images/dressCodeAdvanced.avif" alt="">
+                </div>
+              </details>
+
+              <details>
+                <summary>Hip Hop: All Levels</summary>
+                <div>
+                  <p>Attire: DFJ Hip Hop shirt (available in the studio shop online).</p>
+                  <p>Comfortable loose-fitting black jogger pants or black jersey shorts (no jeans).</p>
+                  <p>Shoes: White Nike sneakers or white “studio” sneakers (reserved for indoor studio use only to protect flooring)</p>
+                  <p>Girls Hair: High or low ponytail</p>
+                  <p>Boys Hair: Pulled back neatly</p>
+                  <img src="images/dressCodeHipHop.avif" alt="">
+                </div>
+              </details>
+
+              <details>
+                <summary>Boys: All Levels</summary>
+                <div>
+                  <h4>Introductory: Combo and Creative Movement</h4>
+                  <p>Attire: Plain white T-shirt, black pants or shorts</p>
+                  <p>Shoes: Black canvas ballet shoes, black Tap shoes, black grip socks.</p>
+                  <p>Hair: pulled back</p>
+
+                  <h4>BALLET</h4>
+                  <p>Attire: Plain white T-shirt, black pants or shorts</p>
+                  <p>Shoes: Black Ballet shoes</p>
+                  <p>Hair: Pulled back</p>
+                  <p>Props: .5 lb wrist/ankle weights</p>
+
+                  <h4>LYRICAL</h4>
+                  <p>Attire: Plain white T-shirt, black pants or shorts</p>
+                  <p>Shoes: Skin tone Lyrical (twyla) shoes Level 1 | Black Block Socks Level 2-6</p>
+                  <p>Hair: Pulled back</p>
+
+                  <h4>JAZZ AND MUSICAL THEATER</h4>
+                  <p>Attire: Plain white T-shirt, black pants or shorts</p>
+                  <p>Shoes: Black Jazz shoes</p>
+                  <p>Hair: Pulled Back</p>
+                  <p>Props (Jazz): * Props: .5 lb wrist/ankle weights</p>
+
+                  <h4>TAP</h4>
+                  <p>Attire: Plain white T-shirt, black pants or shorts</p>
+                  <p>Shoes: Black, Tap shoes (flat bottom)</p>
+                  <p>Hair: Pulled Back</p>
+                  <p>Props: * Props: .5 lb wrist/ankle weights</p>
+
+                  <h4>PRAISE AND WORSHIP</h4>
+                  <p>Attire: Any DFJ T-shirt, black pants or shorts</p>
+                  <p>Shoes: Black canvas Ballet shoes</p>
+                  <p>Hair: Pulled Back</p>
+
+                  <h4>ACRO/TRAPEZE</h4>
+                  <p>Attire: Plain white T-shirt, black pants or shorts</p>
+                  <p>Shoes: Black Grip socks</p>
+                  <p>Hair: Pulled Back</p>
+                  <img src="images/dressCodeBoys.avif" alt="">
+                </div>
+              </details>
+            </div>
+          </details>              
+        </div>
+      </section>
+      <hr>
+    </main>
+      
     <footer>
       <div id="flex-footer">
         <!-- Connect -->
         <section id="connect">
           <h2 class="sr-only">Connect</h2>
           <!-- Parent Portal Button -->
-          <a id="parentB" class="dfj-button" href="https://app.gostudiopro.com/online/dancingforjoy4">Parent Portal</a>
+          <a id="parentB" class="dfj-button" href="https://app.gostudiopro.com/online/dancingforjoy4" target="_blank">Parent Portal</a>
           
           <div id="social-media">
             <h3 class="sr-only">Social Media</h3>
@@ -468,6 +436,5 @@
         <i>This site is for educational purposes only.</i></p>
       </section>
     </footer>
-        
-    </body>
+  </body>
 </html>
