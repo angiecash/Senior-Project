@@ -1,8 +1,7 @@
-/* GIT480 Senior Project: Angela Cash --> */
-/* Validated 12/3/2025: https://jigsaw.w3.org/css-validator/#validate_by_input*/
+/* GIT480 Senior Project: Angela Cash */
+/* Validated 12/3/2025: https://jigsaw.w3.org/css-validator/#validate_by_input */
 /* #region || Variables */
 :root {
-
 /* ------- COLORS ------- */
 	--dkpurple: #561b75;
 	--transparent-purple: #561b7580;
@@ -20,8 +19,9 @@
 	--light: 300;
 	--regular: 400;
 	--bold: 700;
-	/* #endregion || Variables */
 }
+/* #endregion || Variables */
+
 /* #region || Skip Link Styles */
 #skip {
 	position: absolute;
@@ -215,11 +215,11 @@ nav {
 }
 .person p:nth-child(2) {
 	font-size: 1.2em;
-	font-weight: 700;
+	font-weight: var(--bold);
 }
 .person p:nth-child(3) {
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: var(--regular);
 }
 #career {
 	text-align: center;
@@ -251,7 +251,7 @@ nav {
 }
 .programs-intro h3, .programs-intro h4 {
 	margin: 0 auto;
-	font-weight: 700;
+	font-weight: var(--bold);
 	font-family: var(--sec-font);
 }
 /* ------- PARTIES (General Styles) ------- */
@@ -281,7 +281,7 @@ nav {
 	border-radius: 15px;
 	outline: 5px solid var(--dkpurple); 
 	font-family: var(--sec-font);
-	font-weight: 400;
+	font-weight: var(--regular);
 }
 /* ------- JOY COMPANY (General Styles) ------- */
 .company {
@@ -297,11 +297,11 @@ nav {
 }
 .company p:nth-child(2) {
 	font-size: 1.2em;
-	font-weight: 700;
+	font-weight: var(--bold);
 }
 .copmpany p:nth-child(3) {
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: var(--regular);
 }
 /* ------- FAQ (General Styles) ------- */
   #faq-title {
@@ -347,7 +347,7 @@ footer {
 }
 footer a, footer address {
 	color: var(--dkpurple);
-	font-weight: 400;
+	font-weight: var(--regular);
 	font-size: 16px;
 }
 footer a:hover {
@@ -411,7 +411,7 @@ footer a:hover {
 	margin: 0 15px;
 }
 #mainnav ul li a:hover {
-	font-weight: 700;
+	font-weight: var(--bold);
 }
 /* #region || Hamburger Menu & Animation (Mobile) from Mikael Ainalme ( https://codepen.io/ainalem/pen/LJYRxz?editors=1100 ) */
 nav label {
@@ -536,10 +536,10 @@ footer {
 	z-index: 9999;
 }
 #signupnav a {
-	font-weight: 700;
+	font-weight: var(--bold);
 }
 #dropdown:checked ~ #dropmenu #signupnav {
-	transform: translateX(-50%) translateY(-76%);
+	transform: translateX(-50%) translateY(-52.7%);
 }
 /* ------- PAGES 768px ------- */
 main img { 
@@ -711,17 +711,36 @@ nav a {
 	width: fit-content;
 }
 /* ------- MAIN ------- */
+/*
 #main-content h1, h2, h3, h4, h5 {
 	margin-left: 50px;
 	max-width: 65vw;
-
 }
+	*/
 #main-content p {
 	/*margin-left: 75px;*/
-	max-width: 45vw;
+	max-width: 35vw;
 }
 #main-content .dfj-button {
 	margin: 10px auto;
+}
+.pri-content {
+	display: grid;
+	grid-template-rows: 10% auto 12%;
+	grid-template-columns: 1fr 1fr;
+	margin: 40px 0;
+}
+.pri-content img {
+	grid-row: 1 / span 3;
+	max-height: 500px;
+}
+.pri-content h3 {
+	grid-row: 1 / span 1;
+	grid-column: 2 / span 1;
+}
+pri-content p {
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
 }
 /* ------- 992px Styles ------- */
 main {
@@ -737,5 +756,15 @@ main img {
 #schedule img {
 	max-width: 50vw;
 }
+blockquote {
+	margin-left: 20%;
+}
 }
 /* #endregion || Large 992px */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
