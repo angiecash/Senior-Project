@@ -70,9 +70,9 @@ header {
 body {
 	max-width: 1200px;
 	margin: 0 auto;
-	line-height: normal;
+	line-height: 1.6;
 	background-color: white;
-	font-size: 16px; 
+	font-size: 1rem; 
 	font-family: var(--pri-font);
 	font-weight: var(--regular);
 }
@@ -81,6 +81,9 @@ a {
 	text-decoration: none;
 	color: var(--dkpurple);
 	font-weight: var(--regular);
+}
+a:focus, button:focus, input:focus {
+	outline: 4px solid var(--dkpurple);
 }
 h1, h2, h3, h4, h5 {
 	font-family: var(--pri-font);
@@ -136,12 +139,6 @@ main {
 .active {
 	color: var(--dkpurple);
 	font-weight: 700;
-}
-.left {
-	display: flex;
-}
-.right {
-	display: flex;
 }
 .shrink {
 	max-width: 300px;
@@ -204,12 +201,29 @@ nav {
 }
 /* ------- HOMEPAGE END ------- */
 /* ------- STUDIO (General Styles) ------- */
-.flex-container {
-	display: flex;
-	width: 100%;
+.grid-container {
+	display: grid;
+	grid-template-rows: repeat(1, 1fr);
 }
-.left, .right {
+.video-wrapper {
+	position: relative;
+	width: 80%;
+	height: 0;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
+	border: none;
+}
+.left p, .right p, #primary p {
+	width: 100%;
+	padding: 15px 0 15px 0;
 }
 .person {
 	padding: 10px 10px 0 10px;
@@ -251,7 +265,7 @@ nav {
 .programs-intro h4 {
 	margin: 0 auto;
 	font-weight: var(--bold);
-	font-family: var(--sec-font);
+	font-family: var(--pri-font);
 }
 .programs-intro ul {
 	list-style: none;
@@ -587,6 +601,10 @@ blockquote {
 #instructors ul {
 	margin-left: 200px;
 }
+#primary p {
+	margin: 0 auto;
+	max-width:  75%;	
+}
 /* ------- CLASSES 768px ------- */
 #genre-gallery {
 	display: flex;
@@ -764,9 +782,11 @@ main img {
 	max-width: 900px;
 	height: auto;
 }
+/*
 .person {
 	height: 395px;
 }
+	*/
 #schedule img {
 	max-width: 50vw;
 }
