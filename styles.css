@@ -156,6 +156,13 @@ main {
 	font-weight: 700;
 	text-decoration: underline;
 }
+.spacing {
+	margin: 30px 0;
+	max-width: 70vw;
+	text-align: start;
+	align-items: center;
+	margin: 0 auto;
+}
 /* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
 	display: block;
