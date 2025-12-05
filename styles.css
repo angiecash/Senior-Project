@@ -204,6 +204,13 @@ nav {
 }
 /* ------- HOMEPAGE END ------- */
 /* ------- STUDIO (General Styles) ------- */
+.flex-container {
+	display: flex;
+	width: 100%;
+}
+.left, .right {
+	width: 100%;
+}
 .person {
 	padding: 10px 10px 0 10px;
 	text-align: center;
@@ -236,18 +243,9 @@ nav {
 	flex-direction: column;
 	width: 100%;
 	gap: 20px;
+	margin-top: 25px;
 }
-/*
-.programs {
-	background-image: url("images/aftercare.avif");
-	background-size: contain;
-	background-position: top center;
-	background-attachment: scroll;
-	background-repeat: no-repeat;
-}
-	*/
 .programs-intro {
-	/*text-align: center;*/
 	background-color: #FFFFFFBB;
 }
 .programs-intro h4 {
@@ -263,14 +261,6 @@ nav {
 	border-radius: 0;
 	display: none;
 }
-/*
-.busright {
-	position: absolute;
-	top: 0;
-	left: 15%;
-	font-size: 1.8em;
-}
-	*/
 .busright h3 {
 	color: var(--dkpurple);
 	font-family: var(--pri-font);
@@ -723,6 +713,7 @@ nav a {
 	position: relative;
 	font-size: 16px;
 	text-align: center;
+	padding: 10px;
 }
 #dropmenu > ul > li > ul {
 	flex-direction: column;
@@ -740,15 +731,10 @@ nav a {
 }
 /* ------- MAIN ------- */
 /*
-#main-content h1, h2, h3, h4, h5 {
-	margin-left: 50px;
-	max-width: 65vw;
-}
-	*/
 #main-content p {
-	/*margin-left: 75px;*/
 	max-width: 35vw;
 }
+	*/
 #main-content .dfj-button {
 	margin: 10px auto;
 }
@@ -795,11 +781,20 @@ blockquote {
 }
 .busright h3 {
 	color: white;
-
 }
 .bus-container img {
-	border-radius: 0;
+	border-radius: 15px;
 	display:block;
+}
+#program-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 25px;
+}
+.program-left, .program-right {
+	flex: 2;
+	text-align:start;
 }
 /* #endregion || Large 992px */
 
