@@ -128,6 +128,9 @@ main {
 	margin: 0 auto;
 	max-width: 450px;	
 }
+p {
+	padding: 10px;
+}
 #main-content .dfj-button {
 	margin: 10px auto;
 }
@@ -163,6 +166,7 @@ main {
 	align-items: center;
 	margin: 0 auto;
 }
+
 /* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
 	display: block;
@@ -308,21 +312,13 @@ nav {
 	font-size: 1.8em;
 }
 /* ------- PARTIES (General Styles) ------- */
-#parties {
-	background-image: url("images/events.avif");
-	background-size: contain;
-	background-position: center center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-}
 .party {
 	padding: 15px;
-	box-shadow: var(--transparent-purple) 10px 10px 18px 10px;
-	background-color: #FFFFFFCC;
+	box-shadow: var(--transparent-purple) 7px 7px 15px 7px;
+	background-color: var(--white);
 	color: var(--dkpurple);
 	border-radius: 15px;
 	margin: 10px auto;
-	height: fit-content;
 	line-height: 1;
 	display: flex;
 	flex-direction: column;
@@ -666,23 +662,9 @@ blockquote {
 #genre-gallery .genre img {
 	max-width: 350px;
 }
-.shrink-img img {
+.shrink-img {
 	max-width: 300px;
 	height: auto;
-}
-/* ------- JOY COMPANY 768px ------- */
-#company-gallery {
-	display: flex;
-	flex-direction: row;
-	max-width: 1100px;
-	flex-wrap: wrap;
-	gap: 50px;
-	justify-content: center;
-	margin: 0 auto;
-}
-#company-gallery .company img {
-	width: auto;
-	max-height: 250px;
 }
 /* ------- PROGRAMS 768px ------- */
 .summer-images {
@@ -705,6 +687,71 @@ blockquote {
 }
 .busright h3 {
 	color: var(--dkpurple);
+}
+/* ------- JOY COMPANY 768px ------- */
+#company-gallery {
+	display: flex;
+	flex-direction: row;
+	max-width: 1100px;
+	flex-wrap: wrap;
+	gap: 50px;
+	justify-content: center;
+	margin: 0 auto;
+}
+#company-gallery .company img {
+	width: auto;
+	max-height: 250px;
+}
+/* ------- PARTIES 768px ------- */
+.party {
+	flex-direction: column;
+	max-width: 33%;
+}
+.party:hover {
+	scale: 1.2;
+	z-index: 999;
+}
+#party-trio {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+.party-intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto 1fr auto auto;
+	max-width: 90%;
+	justify-items: center;
+}
+.party-intro h3, .party-intro p:nth-child(2), .party-intro p:nth-child(3) {
+	grid-column: 1 / span 2;
+}
+.party-info {
+	grid-column: 1 / span 2;
+	grid-row: 4 / span 1;
+}
+.party-intro img {
+	grid-column: 1 / span 1;
+	grid-row: 5 / span 2;
+}
+.party-intro h4 {
+	grid-column: 2 / span 1;
+	grid-row: 5 / span 1;
+	font-size: 1.5em;
+	font-family: var(--pri-font);
+}
+.party-intro p:nth-child(6) {
+	grid-column: 2 / span 1;
+	grid-row: 6 / span 1;
+	margin: 0 auto;
+}
+#included {
+	grid-column: 1 / span 1;
+	grid-row: 4 / span 1;
+}
+#pricing {
+	grid-column: 2 / span 1;
+	grid-row: 4 / span 1;
 }
 /* ------- FAQ 768px ------- */
   #faq-title {
@@ -795,11 +842,6 @@ nav a {
 	width: fit-content;
 }
 /* ------- MAIN ------- */
-/*
-#main-content p {
-	max-width: 35vw;
-}
-	*/
 #main-content .dfj-button {
 	margin: 10px auto;
 }
@@ -817,7 +859,7 @@ nav a {
 	grid-row: 1 / span 1;
 	grid-column: 2 / span 1;
 }
-pri-content p {
+.pri-content p {
 	grid-row: 2 / span 1;
 	grid-column: 2 / span 1;
 }
