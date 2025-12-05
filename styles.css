@@ -166,7 +166,29 @@ p {
 	align-items: center;
 	margin: 0 auto;
 }
-
+.border-effect {
+	border: 4mm ridge var(--mdpurple);
+}
+#back-to-top {
+	display: none;
+	position: fixed;
+	bottom: 100px;
+	right: 10px;
+	padding: 10px;
+	color: var(--dkpurple);
+	border-radius: 15px;
+	background-color: var(--ltpurple);
+	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
+	transition: all .3s ease-in-out;
+	z-index: 1000;
+	cursor: pointer;
+	border-style: inset;
+	width: 140px;
+}
+#back-to-top.show {
+	display: block;
+	opacity: 1;
+}
 /* ------- BUTTON STYLES (General Styles) ------- */
 .dfj-button {
 	display: block;
@@ -467,9 +489,11 @@ footer a:hover {
 	display: block;
 	margin: 0 15px;
 }
+/*
 #mainnav ul li a:hover {
 	font-weight: var(--bold);
 }
+	*/
 /* #region || Hamburger Menu & Animation (Mobile) from Mikael Ainalme ( https://codepen.io/ainalem/pen/LJYRxz?editors=1100 ) */
 nav label {
 	width: 115px;
@@ -544,7 +568,6 @@ main img {
 	max-width: 65vw;
 }
 #int-gallery .person img:hover {
-	/*scale: 115%;*/
 	transition: scale .3s ease-in-out;
 }
 /* ------- INSTRUCTOR GALLERY END (Mobile) ------- */
@@ -557,10 +580,6 @@ main img {
 #company-gallery .company img {
 	max-width: 75vw;
 	box-shadow: 0px 10px 8px -8px rgb(255 255 255 / 0.6);
-}
-#company-gallery .company img:hover {
-	/*scale: 115%;*/
-	transition: scale .3s ease-in-out;
 }
 /* ------- CLASSES 768px ------- */
 #genre-gallery {
@@ -706,10 +725,6 @@ blockquote {
 .party {
 	flex-direction: column;
 	max-width: 33%;
-}
-.party:hover {
-	scale: 1.2;
-	z-index: 999;
 }
 #party-trio {
 	display: flex;
