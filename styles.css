@@ -91,9 +91,14 @@ a {
 a:focus, button:focus, input:focus {
 	outline: 4px solid var(--dkpurple);
 }
+a:hover {
+	color: var(--dkpurple);
+	font-weight: var(--bold);
+}
 h1, h2, h3, h4, h5 {
 	font-family: var(--pri-font);
 	color: var(--dkpurple);
+	text-align: center;
 }
 h1 {
 	font-size: 2.5em;
@@ -118,9 +123,6 @@ h5 {
 main {
 	margin: 50px auto;
 	padding: 20px;
-}
-#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5 {
-	text-align: center;
 }
 #primary p {
 	margin: 0 auto;
@@ -262,6 +264,13 @@ nav {
 	padding-top: 10px;
 }
 /* ------- STUDIO END ------- */
+/* ------- CLASSES ------- */
+#genre-gallery .genre {
+	display: flex; 
+	flex-direction: column;
+	text-align:start;
+	border-radius: 15px;
+}
 /* ------- PROGRAMS (General Styles)------- */
 .summer-images {
 	display: flex;
@@ -336,9 +345,12 @@ nav {
 	font-size: 1.2em;
 	font-weight: var(--bold);
 }
-.copmpany p:nth-child(3) {
+.company p:nth-child(3) {
 	font-size: 1em;
 	font-weight: var(--regular);
+}
+#calendar h2, #calendar h3 {
+	text-align: start;
 }
 /* ------- FAQ (General Styles) ------- */
   #faq-title {
@@ -347,7 +359,7 @@ nav {
 	align-items: center;
 	justify-content: center;
   }
-  #faq-title img {
+ #faq-title img {
 	max-height: 150px;
 	border-radius: 0;
   }
@@ -361,16 +373,21 @@ nav {
 	border-radius: 0;
 	max-width: 50vw;
   }
+  #faq-container h3, #faq-container h4 {
+	text-align: left;
+  }
   details summary {
 	padding: 10px;
+	margin-left: 30px;
   }
   details div {
 	margin-left: 25px;
-	background-color: var(--mdpurple);
+	background-color: var(--ltpurple);
 	padding: 15px;
 	border-radius: 15px;
 	margin-bottom: 20px;
   }
+
 /* ------- FOOTER (General Styles)------- */
 footer {
 	line-height: 1.5em;
@@ -499,7 +516,7 @@ nav label {
 /* #endregion || END OF HAMBURGER MENU */
 /* ------- NAVIGATION (Mobile) (Cont.) ------- */
 main {
-	font-size: 24px;
+	font-size: 18px;
 }
 main img { 
 	max-width: 85vw;
@@ -546,10 +563,9 @@ main img {
 #genre-gallery {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 }
-#genre-gallery .genre {
-	max-width: 75vw;
+.genre p {
+	padding: 10px;
 }
 /* ------- FOOTER (Mobile) ------- */
 footer {
@@ -624,13 +640,21 @@ blockquote {
 	flex-direction: row;
 	max-width: 1100px;
 	flex-wrap: wrap;
-	gap: 50px;
+	gap: 25px;
 	justify-content: space-around;
-	margin: 0 auto;
+	margin: 25px auto;
 	align-items: flex-start;
+}
+#genre-gallery h3 {
+	font-size: 1.5em;
+	padding: 0;
+	margin: 0;
 }
 #genre-gallery .genre {
 	width: 400px;
+	padding: 10px;
+	background-color: var(--ltpurple);
+	border: solid 3px var(--dkpurple);
 }
 #genre-gallery .genre img {
 	max-width: 350px;
@@ -712,6 +736,9 @@ footer {
 
 /* #region || Large 992px */
 @media screen and (min-width: 992px) {
+main {
+	font-size: 24px;
+}
 /* ------- Classes 992px ------- */
 .center {
 	gap: 100px;
@@ -754,10 +781,10 @@ nav a {
 }
 #signupnav {
 	position: absolute;
-	top: 100px;
+	top: 110px;
 	z-index: 9999;
 	background-color: transparent;
-	transform: translateX(150%);
+	transform: translateX(155%);
 	width: fit-content;
 }
 /* ------- MAIN ------- */
@@ -795,11 +822,9 @@ main img {
 	max-width: 900px;
 	height: auto;
 }
-/*
-.person {
-	height: 395px;
+#schedule > h3, #schedule > h4, #schedule > h5 {
+	text-align: start;
 }
-	*/
 #schedule img {
 	max-width: 50vw;
 }
