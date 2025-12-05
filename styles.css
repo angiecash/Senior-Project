@@ -76,6 +76,12 @@ body {
 	font-family: var(--pri-font);
 	font-weight: var(--regular);
 }
+hr {
+	border: none;
+	border-top: 3px double var(--dkpurple);
+	overflow: visible;
+	height: 5px;
+}
 a {
 	font-size: 24px;
 	text-decoration: none;
@@ -113,7 +119,7 @@ main {
 	margin: 50px auto;
 	padding: 20px;
 }
-#main-content h1, h2, h3, h4, h5 {
+#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5 {
 	text-align: center;
 }
 #primary p {
@@ -224,6 +230,11 @@ nav {
 .left p, .right p, #primary p {
 	width: 100%;
 	padding: 15px 0 15px 0;
+	height: fit-content;
+}
+.right img {
+	width: 50%;
+	height: auto;
 }
 .person {
 	padding: 10px 10px 0 10px;
@@ -575,7 +586,6 @@ main img {
 .pri-content {
 	display: flex;
 	flex-direction: column;
-
 }
 .pri-content img {
 	text-align: left;
@@ -604,6 +614,9 @@ blockquote {
 #primary p {
 	margin: 0 auto;
 	max-width:  75%;	
+}
+.grid-container {
+	grid-template-columns: repeat(2, 1fr);
 }
 /* ------- CLASSES 768px ------- */
 #genre-gallery {
@@ -815,6 +828,7 @@ blockquote {
 .program-left, .program-right {
 	flex: 2;
 	text-align:start;
+}
 }
 /* #endregion || Large 992px */
 
