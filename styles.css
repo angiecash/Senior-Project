@@ -237,6 +237,7 @@ nav {
 	width: 100%;
 	gap: 20px;
 }
+/*
 .programs {
 	background-image: url("images/aftercare.avif");
 	background-size: contain;
@@ -244,15 +245,36 @@ nav {
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 }
+	*/
 .programs-intro {
-	text-align: center;
+	/*text-align: center;*/
 	background-color: #FFFFFFBB;
-	
 }
-.programs-intro h3, .programs-intro h4 {
+.programs-intro h4 {
 	margin: 0 auto;
 	font-weight: var(--bold);
 	font-family: var(--sec-font);
+}
+.programs-intro ul {
+	list-style: none;
+	
+}
+.bus-container img {
+	border-radius: 0;
+	display: none;
+}
+/*
+.busright {
+	position: absolute;
+	top: 0;
+	left: 15%;
+	font-size: 1.8em;
+}
+	*/
+.busright h3 {
+	color: var(--dkpurple);
+	font-family: var(--pri-font);
+	font-size: 1.8em;
 }
 /* ------- PARTIES (General Styles) ------- */
 #parties {
@@ -626,6 +648,12 @@ blockquote {
 	object-fit: cover;
 	border-radius: 8px;
 }
+.bus-container {
+	position: relative;
+}
+.busright h3 {
+	color: var(--dkpurple);
+}
 /* ------- FAQ 768px ------- */
   #faq-title {
 	display: grid;
@@ -759,6 +787,19 @@ main img {
 blockquote {
 	margin-left: 20%;
 }
+.busright {
+	position: absolute;
+	top: 0;
+	left: 35%;
+	font-size: 2em;
+}
+.busright h3 {
+	color: white;
+
+}
+.bus-container img {
+	border-radius: 0;
+	display:block;
 }
 /* #endregion || Large 992px */
 
