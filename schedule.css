@@ -20,7 +20,7 @@ caption {
     background: #561b75;
     color: white;
     caption-side: top;
-    min-width: 400px;
+    min-width: 85vw;
 }
 th {
     background: #f0e6f6;
@@ -61,6 +61,7 @@ table {
 }
 caption {
     display: block;
+    min-width:auto;
 }
 
 }
