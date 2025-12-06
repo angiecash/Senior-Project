@@ -1,4 +1,84 @@
-/* ------- For the calendars on classes page ------- */
+table, thead, tbody, th, td, tr { 
+    display: block; 
+}
+table {
+    width: 95%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 50px 0;
+    }
+thead tr { 
+    position: absolute; 
+    top: -9999px; 
+    left: -9999px; 
+}
+caption {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 15px 0 15px 0;
+    background: #561b75;
+    color: white;
+    caption-side: top;
+    min-width: 400px;
+}
+th {
+    background: #f0e6f6;
+    font-weight: bold;
+}
+tr:nth-child(even) { 
+    background: #faf5ff; 
+}
+tr { 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+}
+th, td {
+padding: 12px 8px;
+border: 1px solid #ddd;
+vertical-align: top;
+min-height: 30px;
+}
+td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+}
+td:before {
+    position: absolute;
+    left: 12px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+}
+
+@media (min-width: 768px) {
+table {
+    display: block;
+}
+caption {
+    display: block;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- For the calendars on classes page ------- 
+
+
 table {
     width: 95%;
     border-collapse: collapse;
